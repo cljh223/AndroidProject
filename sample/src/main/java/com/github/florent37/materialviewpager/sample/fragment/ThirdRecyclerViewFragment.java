@@ -23,7 +23,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by florentchampigny on 24/04/15.
+ * Created by florentchampigny on 04/01/2018.
  */
 public class ThirdRecyclerViewFragment extends Fragment {
 
