@@ -49,7 +49,7 @@ public class ThirdRecyclerViewFragment extends Fragment {
 
         final List<Object> items = new ArrayList<>();
 
-        for (int i = 0; i < ITEM_COUNT; ++i) {
+        for (int i = 1; i < ITEM_COUNT; ++i) {
             items.add(new Object());
         }
 
