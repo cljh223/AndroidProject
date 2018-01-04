@@ -18,28 +18,66 @@
         app:cardPreventCornerOverlap="false"
         app:contentPadding="0dp">
 
-
         <LinearLayout
-            android:id="@+id/purchaseFirstLayout"
+            android:id="@+id/salesFirstBigLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/firstSmall"
+                android:id="@+id/firstBigDetail1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="영업 1"
-                />
+                android:text="구매 1" />
 
             <TextView
-                android:id="@+id/secondSmall"
+                android:id="@+id/firstBigDetail2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="영업 2"
-                />
+                android:text="구매 2" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/salesSecondBigLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/purchaseSecondBigDetail1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="구매 3" />
+
+            <TextView
+                android:id="@+id/purchaseSecondBigDetail2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="구매 3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/salesThirdBigLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ThirdigDetail1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="구매 4" />
+
+            <TextView
+                android:id="@+id/ThirdBigDetail2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="구매 5" />
+
+        </LinearLayout>
+
     </android.support.v7.widget.CardView>
 
 </FrameLayout>

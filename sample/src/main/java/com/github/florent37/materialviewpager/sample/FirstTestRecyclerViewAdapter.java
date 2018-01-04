@@ -1,32 +1,21 @@
 package com.github.florent37.materialviewpager.sample;
 
 import android.app.ProgressDialog;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.widget.RecyclerView;
 import android.text.Layout;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
+import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import io.fabric.sdk.android.services.concurrency.Task;
 
 /**
  * Created by florentchampigny on 24/04/15.
  */
-public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     List<Object> contents;
 
@@ -37,7 +26,7 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     String jsontext;
     ProgressDialog progressDialog;
 
-    public TestRecyclerViewAdapter(List<Object> contents) {
+    public FirstTestRecyclerViewAdapter(List<Object> contents) {
         this.contents = contents;
     }
 
@@ -65,66 +54,89 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
                     case TYPE_HEADER: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_small_purchase, parent, false);
+                        view.findViewById(R.id.purchaseFirstSmallLayout).setVisibility(View.VISIBLE);
+                        view.findViewById(R.id.purchaseSecondSmallLayout).setVisibility(View.GONE);
+                        view.findViewById(R.id.purchaseThirdSmallLayout).setVisibility(View.GONE);
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
                     case TYPE_CELL: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_big_purchase, parent, false);
+                        view.findViewById(R.id.purchaseFirstBigLayout).setVisibility(View.VISIBLE);
+                        view.findViewById(R.id.purchaseSecondBigLayout).setVisibility(View.GONE);
+                        view.findViewById(R.id.purchaseThirdBigLayout).setVisibility(View.GONE);
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
                 }
-                break;
             case "production":
                 switch (viewType) {
                     case TYPE_HEADER: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_small_production, parent, false);
+                        view.findViewById(R.id.productionFirstSmallLayout).setVisibility(View.VISIBLE);
+                        view.findViewById(R.id.productionSecondSmallLayout).setVisibility(View.GONE);
+                        view.findViewById(R.id.productionThirdSmallLayout).setVisibility(View.GONE);
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
                     case TYPE_CELL: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_big_production, parent, false);
+                        view.findViewById(R.id.productionFirstBigLayout).setVisibility(View.VISIBLE);
+                        view.findViewById(R.id.productionSecondBigLayout).setVisibility(View.GONE);
+                        view.findViewById(R.id.productionThirdBigLayout).setVisibility(View.GONE);
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
                 }
-                break;
             case "logistics":
                 switch (viewType) {
                     case TYPE_HEADER: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_small_logistics, parent, false);
+                        view.findViewById(R.id.logisticsFirstSmallLayout).setVisibility(View.VISIBLE);
+                        view.findViewById(R.id.logisticsSecondSmallLayout).setVisibility(View.GONE);
+                        view.findViewById(R.id.logisticsThirdSmallLayout).setVisibility(View.GONE);
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
                     case TYPE_CELL: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_big_logistics, parent, false);
+                        view.findViewById(R.id.logisticsFirstBigLayout).setVisibility(View.VISIBLE);
+                        view.findViewById(R.id.logisticsSecondBigLayout).setVisibility(View.GONE);
+                        view.findViewById(R.id.logisticsThirdBigLayout).setVisibility(View.GONE);
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
                 }
-                break;
             case "sales":
                 switch (viewType) {
                     case TYPE_HEADER: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_small_sales, parent, false);
+                        view.findViewById(R.id.salesFirstSmallLayout).setVisibility(View.VISIBLE);
+                        view.findViewById(R.id.salesSecondSmallLayout).setVisibility(View.GONE);
+                        view.findViewById(R.id.salesThirdSmallLayout).setVisibility(View.GONE);
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
                     case TYPE_CELL: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_big_sales, parent, false);
-
+                        view.findViewById(R.id.salesFirstBigLayout).setVisibility(View.VISIBLE);
+                        view.findViewById(R.id.salesSecondBigLayout).setVisibility(View.GONE);
+                        view.findViewById(R.id.salesThirdBigLayout).setVisibility(View.GONE);
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
                 }
-                break;
+
+
+                return new RecyclerView.ViewHolder(view) {
+                };
         }
         return null;
     }
@@ -138,6 +150,5 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
                 break;
         }
     }
-
 
 }

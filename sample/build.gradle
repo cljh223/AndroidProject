@@ -51,6 +51,9 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.1.0'
 
+    //Gson이란 데이터를 json형식으로 주고 받을 수 있도록 구글에서 만든 라이브러리
+    compile 'com.google.code.gson:gson:2.8.2'
+
     //compile ('com.github.florent37:materialviewpager:1.0.6@aar'){
     //    transitive=true
     //}

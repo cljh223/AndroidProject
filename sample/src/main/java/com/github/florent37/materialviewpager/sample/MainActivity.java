@@ -11,15 +11,25 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebViewFragment;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.crashlytics.android.Crashlytics;
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
+import com.github.florent37.materialviewpager.sample.fragment.FIrstRecyclerViewFragment;
+import com.github.florent37.materialviewpager.sample.fragment.FourthRecyclerViewFragment;
 import com.github.florent37.materialviewpager.sample.fragment.RecyclerViewFragment;
+import com.github.florent37.materialviewpager.sample.fragment.SecondRecyclerViewFragment;
+import com.github.florent37.materialviewpager.sample.fragment.ThirdRecyclerViewFragment;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ActionBarDrawerToggle mDrawerToggle;
 
     static String WHERE = "purchase";
+    static String WHERE_DETAIL = "가격 및 재고";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         setNavigationViewListener();
         changePage();
+
     }
 
     @Override
@@ -159,21 +171,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public Fragment getItem(int position) {
                 switch (position % 4) {
-                    //case 0:
-                    //return RecyclerViewFragment.newInstance();
-                   /* case 1:
-                        return RecyclerViewFragment.newInstance();*/
-                    //case 2:
-                    //    return WebViewFragment.newInstance();
+                    case 0:
+                        return FIrstRecyclerViewFragment.newInstance();
+                    case 1:
+                        return SecondRecyclerViewFragment.newInstance();
+                    case 2:
+                        return ThirdRecyclerViewFragment.newInstance();
                     default:
-                        return RecyclerViewFragment.newInstance();
+                        return FourthRecyclerViewFragment.newInstance();
                 }
             }
 
             @Override
             public int getCount() {
-                return 4;
+                return 3;
             }
+
+
 
             @Override
             public CharSequence getPageTitle(int position) {
@@ -182,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case "purchase":
                         switch (position % 4) {
                             case 0:
-                                return "Selection";
+                                return "가격 및 재고";
                             case 1:
                                 return "Actualités";
                             case 2:

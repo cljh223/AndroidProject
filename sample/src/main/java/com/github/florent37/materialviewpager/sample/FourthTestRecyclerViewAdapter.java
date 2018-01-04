@@ -1,32 +1,19 @@
 package com.github.florent37.materialviewpager.sample;
 
 import android.app.ProgressDialog;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import io.fabric.sdk.android.services.concurrency.Task;
 
 /**
  * Created by florentchampigny on 24/04/15.
  */
-public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class FourthTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     List<Object> contents;
 
@@ -37,7 +24,7 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     String jsontext;
     ProgressDialog progressDialog;
 
-    public TestRecyclerViewAdapter(List<Object> contents) {
+    public FourthTestRecyclerViewAdapter(List<Object> contents) {
         this.contents = contents;
     }
 

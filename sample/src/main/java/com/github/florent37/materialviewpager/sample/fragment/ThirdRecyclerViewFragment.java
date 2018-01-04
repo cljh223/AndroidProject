@@ -10,11 +10,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
+import com.github.florent37.materialviewpager.sample.FirstTestRecyclerViewAdapter;
 import com.github.florent37.materialviewpager.sample.R;
-import com.github.florent37.materialviewpager.sample.TestRecyclerViewAdapter;
+import com.github.florent37.materialviewpager.sample.ThirdTestRecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 /**
  * Created by florentchampigny on 24/04/15.
  */
-public class RecyclerViewFragment extends Fragment {
+public class ThirdRecyclerViewFragment extends Fragment {
 
     private static final boolean GRID_LAYOUT = false;
     //카드 숫자
@@ -33,8 +33,8 @@ public class RecyclerViewFragment extends Fragment {
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
 
-    public static RecyclerViewFragment newInstance() {
-        return new RecyclerViewFragment();
+    public static ThirdRecyclerViewFragment newInstance() {
+        return new ThirdRecyclerViewFragment();
     }
 
     @Override
@@ -67,7 +67,7 @@ public class RecyclerViewFragment extends Fragment {
 
         Log.v("여기야===================>", "여기");
         mRecyclerView.addItemDecoration(new MaterialViewPagerHeaderDecorator());
-        mRecyclerView.setAdapter(new TestRecyclerViewAdapter(items));
+        mRecyclerView.setAdapter(new ThirdTestRecyclerViewAdapter(items));
 
     }
 }
