@@ -57,7 +57,7 @@ public class ThirdRecyclerViewFragment extends Fragment {
         //setup materialviewpager
 
         if (GRID_LAYOUT) {
-            mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+            mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         } else {
             mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         }
