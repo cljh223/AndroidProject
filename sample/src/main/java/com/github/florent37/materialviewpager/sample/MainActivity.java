@@ -1,6 +1,7 @@
 package com.github.florent37.materialviewpager.sample;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -17,6 +18,8 @@ import android.view.View;
 import android.webkit.WebViewFragment;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.crashlytics.android.Crashlytics;
@@ -89,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             });
         }
 
+
         setNavigationViewListener();
         changePage();
 
@@ -126,6 +130,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
             case R.id.logisticsMenu: {
                 //do somthing
+                /*TextView textView = (TextView) findViewById(R.id.index1_1);
+                textView.setText("60%");*/
+
                 Toast.makeText(this, "은지쏘오오옹!", Toast.LENGTH_SHORT).show();
                 WHERE = "logistics";
                 break;
@@ -221,11 +228,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                         switch (position % 4) {
                             case 0:
-                                return "Selection";
+                                return "제 1물류창고";
                             case 1:
-                                return "Actualités";
+                                return "제 2물류창고";
                             case 2:
-                                return "Professionnel";
+                                return "제 3물류창고";
                             case 3:
                                 return "Divertissement";
                         }
