@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
+import com.github.florent37.materialviewpager.sample.MainActivity;
 import com.github.florent37.materialviewpager.sample.R;
 import com.github.florent37.materialviewpager.sample.TestRecyclerViewAdapter;
 
@@ -27,6 +28,7 @@ import butterknife.ButterKnife;
 public class RecyclerViewFragment extends Fragment {
 
     private static final boolean GRID_LAYOUT = false;
+
     //카드 숫자
     private static final int ITEM_COUNT = 2;
     @BindView(R.id.recyclerView)
@@ -67,6 +69,5 @@ public class RecyclerViewFragment extends Fragment {
         Log.v("여기야===================>", "여기");
         mRecyclerView.addItemDecoration(new MaterialViewPagerHeaderDecorator());
         mRecyclerView.setAdapter(new TestRecyclerViewAdapter(items));
-
     }
 }

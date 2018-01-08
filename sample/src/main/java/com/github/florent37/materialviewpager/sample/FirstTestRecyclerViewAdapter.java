@@ -1,12 +1,15 @@
 package com.github.florent37.materialviewpager.sample;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -96,9 +99,26 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                     case TYPE_HEADER: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_small_logistics, parent, false);
+                        Log.v("여기", "에서 작은카드 붙음");
+                        /*Intent intent = new Intent(this, logi_SmallActivity.class);
+                        startActivity(intent);*/
                         view.findViewById(R.id.logisticsFirstSmallLayout).setVisibility(View.VISIBLE);
                         view.findViewById(R.id.logisticsSecondSmallLayout).setVisibility(View.GONE);
                         view.findViewById(R.id.logisticsThirdSmallLayout).setVisibility(View.GONE);
+
+                        ProgressBar progressBar1 = (ProgressBar)view.findViewById(R.id.progressBar1_1);
+                        progressBar1.setProgress(50);
+                        ProgressBar progressBar2 = (ProgressBar)view.findViewById(R.id.progressBar1_2);
+                        progressBar2.setProgress(60);
+                        ProgressBar progressBar3 = (ProgressBar)view.findViewById(R.id.progressBar1_3);
+                        progressBar3.setProgress(70);
+                        ProgressBar progressBar4 = (ProgressBar)view.findViewById(R.id.progressBar1_4);
+                        progressBar4.setProgress(80);
+                        ProgressBar progressBar5 = (ProgressBar)view.findViewById(R.id.progressBar1_5);
+                        progressBar5.setProgress(90);
+
+                        TextView textView = (TextView)view.findViewById(R.id.index1_1);
+                        textView.setText("50%");
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }

@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 import com.github.florent37.materialviewpager.sample.FirstTestRecyclerViewAdapter;
@@ -64,7 +65,6 @@ public class FIrstRecyclerViewFragment extends Fragment {
         mRecyclerView.setHasFixedSize(true);
 
         //Use this now
-
         Log.v("여기야===================>", "여기");
         mRecyclerView.addItemDecoration(new MaterialViewPagerHeaderDecorator());
         mRecyclerView.setAdapter(new FirstTestRecyclerViewAdapter(items));
