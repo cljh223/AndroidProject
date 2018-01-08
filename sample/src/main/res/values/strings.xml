@@ -3,4 +3,26 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="city">
+        <item >서울</item>
+        <item >경기</item>
+        <item >부천</item>
+        <item >수원</item>
+        <item >파주</item>
+        <item >부산</item>
+        <item >대전</item>
+    </string-array>
+
+    <string-array name="salesShop">
+        <item >잠실나루</item>
+        <item >경기</item>
+        <item >부천</item>
+        <item >수원</item>
+        <item >파주</item>
+        <item >부산</item>
+        <item >대전</item>
+    </string-array>
 </resources>
+
+
