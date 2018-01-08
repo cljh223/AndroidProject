@@ -31,6 +31,8 @@ import com.github.florent37.materialviewpager.sample.fragment.RecyclerViewFragme
 import com.github.florent37.materialviewpager.sample.fragment.SecondRecyclerViewFragment;
 import com.github.florent37.materialviewpager.sample.fragment.ThirdRecyclerViewFragment;
 
+import org.w3c.dom.Text;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,6 +47,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private DrawerLayout mDrawer;
     private ActionBarDrawerToggle mDrawerToggle;
+    private int progressStatus = 0;
+    private ProgressBar progressBar1_1;
+    private ProgressBar progressBar1_2;
+    private ProgressBar progressBar1_3;
+    private ProgressBar progressBar1_4;
+    private ProgressBar progressBar1_5;
+    private TextView index1_1;
+    private TextView index1_2;
+    private TextView index1_3;
+    private TextView index1_4;
+    private TextView index1_5;
+    private Handler handler = new Handler();
+
 
     static String WHERE = "purchase";
     static String WHERE_DETAIL = "가격 및 재고";
@@ -130,8 +145,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
             case R.id.logisticsMenu: {
                 //do somthing
-                /*TextView textView = (TextView) findViewById(R.id.index1_1);
-                textView.setText("60%");*/
+                progressBar1_1 = (ProgressBar)findViewById(R.id.progressBar1_1);
+                index1_1 = (TextView)findViewById(R.id.index1_1);
+                progressThread();
 
                 Toast.makeText(this, "은지쏘오오옹!", Toast.LENGTH_SHORT).show();
                 WHERE = "logistics";
@@ -165,6 +181,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //close navigation drawer
         mDrawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void progressThread(){
+        new Thread(new Runnable(){
+
+            @Override
+            public void run() {
+                while(progressStatus < 100){
+                    progressStatus += 1;
+                    // Update the progress bar and display the current value in the textView
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            progressBar1_1.setProgress(progressStatus);
+
+                        }
+                    });
+                }
+            }
+        });
     }
 
     private void setNavigationViewListener() {
