@@ -18,11 +18,13 @@ import org.json.JSONObject;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.InputMismatchException;
 
 public class LoginActivity extends AppCompatActivity {
 
     EditText id, password;
-    String i, p;
+    int i;
+    String p;
     ProgressDialog progressDialog;
     private final int SUCCESS = 0;
     private final int FAIL = 1;
@@ -41,13 +43,18 @@ public class LoginActivity extends AppCompatActivity {
 
     //버튼 이벤트
     public void myClick(View view) {
-        i = id.getText().toString();
+        try {
+            i = Integer.parseInt(id.getText().toString());
+        }catch (Exception e){
+            Toast.makeText(this, "아이디는 사원번호입니다.", Toast.LENGTH_SHORT).show();
+        }
+
         p = password.getText().toString();
 
-        if (i.length() == 0 || p.length() == 0) {
+        if (id.getText().toString().length() == 0 || p.length() == 0) {
             Toast.makeText(this, "데이터를 입력해주세요", Toast.LENGTH_SHORT).show();
             return;
-        }else{
+        } else {
             progressDialog = ProgressDialog.show(this, "Wait", "Download...");
             SendThread thread = new SendThread();
             thread.start();
@@ -55,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     class SendThread extends Thread {
-        String address = "http://192.168.0.14:8888/spring/login?email=" + i + "&password=" + p;
+        String address = "http://192.168.0.14:8888/www/loginAndroid?staff_code=" + i + "&staff_password=" + p;
 
         // 주소, URL 객체
         public void run() {
@@ -77,9 +84,10 @@ public class LoginActivity extends AppCompatActivity {
                         }
                         if (sb.toString().equals("SUCCESS")) {
                             handler.sendEmptyMessage(SUCCESS);
-                            Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                            Intent i = new Intent(getApplicationContext(), MainActivity.class);
                             //Intent를 선언하여 생성을 하고, SecondActivity를 지정해주고
                             startActivity(i);
+                            finish();
                         } else {
                             handler.sendEmptyMessage(FAIL);
                         }
@@ -92,15 +100,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
     }
-
-    Handler handler = new Handler(){
+    Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             progressDialog.dismiss();
-            if(msg.what==SUCCESS){
-                Toast.makeText(LoginActivity.this, i+"님 환영합니다.", Toast.LENGTH_SHORT).show();
-            }else{
+            if (msg.what == SUCCESS) {
+                Toast.makeText(LoginActivity.this, "접속되었습니다.", Toast.LENGTH_SHORT).show();
+            } else {
                 Toast.makeText(LoginActivity.this, "아이디나 바밀번호가 잘못되었습니다.", Toast.LENGTH_SHORT).show();
             }
         }
