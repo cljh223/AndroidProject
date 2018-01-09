@@ -32,9 +32,8 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     TextView textView;
     String jsontext;
     ProgressDialog progressDialog;
-    ImageView radioImg;
-    ImageView ramenImg;
-
+    ImageView radioImg1;
+    ImageView ramenImg1;
 
     public FirstTestRecyclerViewAdapter(List<Object> contents) {
         this.contents = contents;
@@ -164,17 +163,16 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
 
     public void onRadioButtonClicked(View view){
         Log.v("하잇", "=======>여기로 들어옴");
-        RadioGroup RG = view.findViewById(R.id.logi_radioGroup1);
-        radioImg = view.findViewById(R.id.radioImg);
-        ramenImg = view.findViewById(R.id.ramenImg);
+        radioImg1 = view.findViewById(R.id.radioImg1);
+        ramenImg1 = view.findViewById(R.id.ramenImg1);
 
         /*라디오버튼1_1*/
         RadioButton btn11 = view.findViewById(R.id.logi_button11);
         btn11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                radioImg.setImageResource(R.drawable.logi_11);
-                ramenImg.setImageResource(R.drawable.ansung_ramen);
+                radioImg1.setImageResource(R.drawable.logi_11);
+                ramenImg1.setImageResource(R.drawable.ansung_ramen);
             }
         });
 
@@ -183,8 +181,8 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
         btn12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                radioImg.setImageResource(R.drawable.logi_12);
-                ramenImg.setImageResource(R.drawable.sin_ramen);
+                radioImg1.setImageResource(R.drawable.logi_12);
+                ramenImg1.setImageResource(R.drawable.sin_ramen);
             }
         });
 
@@ -193,8 +191,8 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
         btn13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                radioImg.setImageResource(R.drawable.logi_13);
-                ramenImg.setImageResource(R.drawable.nugool_ramen);
+                radioImg1.setImageResource(R.drawable.logi_13);
+                ramenImg1.setImageResource(R.drawable.nugool_ramen);
             }
         });
 
@@ -203,8 +201,8 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
         btn14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                radioImg.setImageResource(R.drawable.logi_14);
-                ramenImg.setImageResource(R.drawable.anchovy_ramen);
+                radioImg1.setImageResource(R.drawable.logi_14);
+                ramenImg1.setImageResource(R.drawable.anchovy_ramen);
             }
         });
 
@@ -213,11 +211,10 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
         btn15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                radioImg.setImageResource(R.drawable.logi_15);
-                ramenImg.setImageResource(R.drawable.sari_ramen);
+                radioImg1.setImageResource(R.drawable.logi_15);
+                ramenImg1.setImageResource(R.drawable.sari_ramen);
             }
         });
-
     }
 
     public void progressBarChange(View view){

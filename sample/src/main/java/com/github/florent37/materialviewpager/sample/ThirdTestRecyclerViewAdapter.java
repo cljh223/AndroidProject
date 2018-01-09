@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import java.util.List;
@@ -23,6 +26,8 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     TextView textView;
     String jsontext;
     ProgressDialog progressDialog;
+    ImageView radioImg3;
+    ImageView ramenImg3;
 
     public ThirdTestRecyclerViewAdapter(List<Object> contents) {
         this.contents = contents;
@@ -97,6 +102,9 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                         view.findViewById(R.id.logisticsFirstSmallLayout).setVisibility(View.GONE);
                         view.findViewById(R.id.logisticsSecondSmallLayout).setVisibility(View.GONE);
                         view.findViewById(R.id.logisticsThirdSmallLayout).setVisibility(View.VISIBLE);
+
+                        /*뷰 이벤트 추가*/
+                        progressBarChange(view);
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
@@ -106,6 +114,9 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                         view.findViewById(R.id.logisticsFirstBigLayout).setVisibility(View.GONE);
                         view.findViewById(R.id.logisticsSecondBigLayout).setVisibility(View.GONE);
                         view.findViewById(R.id.logisticsThirdBigLayout).setVisibility(View.VISIBLE);
+
+                        /*라디오버튼 이벤트 추가*/
+                        onRadioButtonClicked(view);
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
@@ -137,6 +148,78 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                 };
         }
         return null;
+    }
+
+    public void onRadioButtonClicked(View view){
+        radioImg3 = view.findViewById(R.id.radioImg3);
+        ramenImg3 = view.findViewById(R.id.ramenImg3);
+
+        /*라디오버튼3_1*/
+        RadioButton btn31 = view.findViewById(R.id.logi_button31);
+        btn31.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                radioImg3.setImageResource(R.drawable.logi_31);
+                ramenImg3.setImageResource(R.drawable.ansung_ramen);
+            }
+        });
+
+        /*라디오버튼3_2*/
+        RadioButton btn32 = view.findViewById(R.id.logi_button32);
+        btn32.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                radioImg3.setImageResource(R.drawable.logi_32);
+                ramenImg3.setImageResource(R.drawable.sin_ramen);
+            }
+        });
+
+        /*라디오버튼3_3*/
+        RadioButton btn33 = view.findViewById(R.id.logi_button33);
+        btn33.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                radioImg3.setImageResource(R.drawable.logi_33);
+                ramenImg3.setImageResource(R.drawable.nugool_ramen);
+            }
+        });
+
+        /*라디오버튼3_4*/
+        RadioButton btn34 = view.findViewById(R.id.logi_button34);
+        btn34.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                radioImg3.setImageResource(R.drawable.logi_34);
+                ramenImg3.setImageResource(R.drawable.anchovy_ramen);
+            }
+        });
+
+        /*라디오버튼3_5*/
+        RadioButton btn35 = view.findViewById(R.id.logi_button35);
+        btn35.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                radioImg3.setImageResource(R.drawable.logi_35);
+                ramenImg3.setImageResource(R.drawable.sari_ramen);
+            }
+        });
+    }
+
+    public void progressBarChange(View view){
+        /*ProgressBar 수치 변경*/
+        ProgressBar progressBar1 = (ProgressBar)view.findViewById(R.id.progressBar3_1);
+        progressBar1.setProgress(70);
+        ProgressBar progressBar2 = (ProgressBar)view.findViewById(R.id.progressBar3_2);
+        progressBar2.setProgress(50);
+        ProgressBar progressBar3 = (ProgressBar)view.findViewById(R.id.progressBar3_3);
+        progressBar3.setProgress(60);
+        ProgressBar progressBar4 = (ProgressBar)view.findViewById(R.id.progressBar3_4);
+        progressBar4.setProgress(80);
+        ProgressBar progressBar5 = (ProgressBar)view.findViewById(R.id.progressBar3_5);
+        progressBar5.setProgress(90);
+
+        TextView textView = (TextView)view.findViewById(R.id.index3_1);
+        textView.setText("70%");
     }
 
 
