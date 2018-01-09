@@ -9,9 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -28,6 +32,9 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     TextView textView;
     String jsontext;
     ProgressDialog progressDialog;
+    ImageView radioImg;
+    ImageView ramenImg;
+
 
     public FirstTestRecyclerViewAdapter(List<Object> contents) {
         this.contents = contents;
@@ -106,19 +113,9 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                         view.findViewById(R.id.logisticsSecondSmallLayout).setVisibility(View.GONE);
                         view.findViewById(R.id.logisticsThirdSmallLayout).setVisibility(View.GONE);
 
-                        ProgressBar progressBar1 = (ProgressBar)view.findViewById(R.id.progressBar1_1);
-                        progressBar1.setProgress(50);
-                        ProgressBar progressBar2 = (ProgressBar)view.findViewById(R.id.progressBar1_2);
-                        progressBar2.setProgress(60);
-                        ProgressBar progressBar3 = (ProgressBar)view.findViewById(R.id.progressBar1_3);
-                        progressBar3.setProgress(70);
-                        ProgressBar progressBar4 = (ProgressBar)view.findViewById(R.id.progressBar1_4);
-                        progressBar4.setProgress(80);
-                        ProgressBar progressBar5 = (ProgressBar)view.findViewById(R.id.progressBar1_5);
-                        progressBar5.setProgress(90);
+                        /*뷰 이벤트 추가*/
+                        progressBarChange(view);
 
-                        TextView textView = (TextView)view.findViewById(R.id.index1_1);
-                        textView.setText("50%");
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
@@ -128,6 +125,10 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                         view.findViewById(R.id.logisticsFirstBigLayout).setVisibility(View.VISIBLE);
                         view.findViewById(R.id.logisticsSecondBigLayout).setVisibility(View.GONE);
                         view.findViewById(R.id.logisticsThirdBigLayout).setVisibility(View.GONE);
+
+                        /*라디오버튼 이벤트 추가*/
+                        onRadioButtonClicked(view);
+
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
@@ -159,6 +160,81 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                 };
         }
         return null;
+    }
+
+    public void onRadioButtonClicked(View view){
+        Log.v("하잇", "=======>여기로 들어옴");
+        RadioGroup RG = view.findViewById(R.id.logi_radioGroup1);
+        radioImg = view.findViewById(R.id.radioImg);
+        ramenImg = view.findViewById(R.id.ramenImg);
+
+        /*라디오버튼1_1*/
+        RadioButton btn11 = view.findViewById(R.id.logi_button11);
+        btn11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                radioImg.setImageResource(R.drawable.logi_11);
+                ramenImg.setImageResource(R.drawable.ansung_ramen);
+            }
+        });
+
+        /*라디오버튼1_2*/
+        RadioButton btn12 = view.findViewById(R.id.logi_button12);
+        btn12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                radioImg.setImageResource(R.drawable.logi_12);
+                ramenImg.setImageResource(R.drawable.sin_ramen);
+            }
+        });
+
+        /*라디오버튼1_3*/
+        RadioButton btn13 = view.findViewById(R.id.logi_button13);
+        btn13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                radioImg.setImageResource(R.drawable.logi_13);
+                ramenImg.setImageResource(R.drawable.nugool_ramen);
+            }
+        });
+
+        /*라디오버튼1_4*/
+        RadioButton btn14 = view.findViewById(R.id.logi_button14);
+        btn14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                radioImg.setImageResource(R.drawable.logi_14);
+                ramenImg.setImageResource(R.drawable.anchovy_ramen);
+            }
+        });
+
+        /*라디오버튼1_5*/
+        RadioButton btn15 = view.findViewById(R.id.logi_button15);
+        btn15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                radioImg.setImageResource(R.drawable.logi_15);
+                ramenImg.setImageResource(R.drawable.sari_ramen);
+            }
+        });
+
+    }
+
+    public void progressBarChange(View view){
+        /*ProgressBar 수치 변경*/
+        ProgressBar progressBar1 = (ProgressBar)view.findViewById(R.id.progressBar1_1);
+        progressBar1.setProgress(50);
+        ProgressBar progressBar2 = (ProgressBar)view.findViewById(R.id.progressBar1_2);
+        progressBar2.setProgress(60);
+        ProgressBar progressBar3 = (ProgressBar)view.findViewById(R.id.progressBar1_3);
+        progressBar3.setProgress(70);
+        ProgressBar progressBar4 = (ProgressBar)view.findViewById(R.id.progressBar1_4);
+        progressBar4.setProgress(80);
+        ProgressBar progressBar5 = (ProgressBar)view.findViewById(R.id.progressBar1_5);
+        progressBar5.setProgress(90);
+
+        TextView textView = (TextView)view.findViewById(R.id.index1_1);
+        textView.setText("50%");
     }
 
     @Override

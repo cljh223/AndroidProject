@@ -1,6 +1,7 @@
 package com.github.florent37.materialviewpager.sample;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -20,6 +21,8 @@ import android.webkit.WebViewFragment;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private DrawerLayout mDrawer;
     private ActionBarDrawerToggle mDrawerToggle;
-
 
     static String WHERE = "purchase";
     static String WHERE_DETAIL = "가격 및 재고";
@@ -289,3 +291,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 }
+
