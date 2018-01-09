@@ -115,9 +115,6 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                     case TYPE_HEADER: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_small_sales, parent, false);
-                        view.findViewById(R.id.salesFirstSmallLayout).setVisibility(View.GONE);
-                        view.findViewById(R.id.salesSecondSmallLayout).setVisibility(View.GONE);
-                        view.findViewById(R.id.salesThirdSmallLayout).setVisibility(View.VISIBLE);
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }

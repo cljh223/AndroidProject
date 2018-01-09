@@ -8,7 +8,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/cardMarginVertical"
         android:layout_marginLeft="@dimen/cardMarginHorizontal"
         android:layout_marginRight="@dimen/cardMarginHorizontal"
@@ -22,9 +22,8 @@
             android:id="@+id/salesFirstBigLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_marginLeft="10sp"
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/firstBigLayoutTitle"
@@ -45,9 +44,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
-                android:orientation="horizontal"
                 android:layout_marginTop="15sp"
-                >
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -172,8 +170,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginTop="20sp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -240,17 +238,307 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/purchaseSecondBigDetail1"
+            <LinearLayout
+                android:id="@+id/logisticsFirstSmallLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="구매 3" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/purchaseSecondBigDetail2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="구매 3" />
+                <LinearLayout
+                    android:id="@+id/logi_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/secondBigLayoutTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="매장 명"
+                            android:textColor="@color/green_teal"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/secondBigLayoutShopWhat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="대형마트"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/logi_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="최근 열개의 항목을 표시합니다."
+                    android:textColor="@color/green_teal"
+                    android:textSize="17sp" />
+
+                <TableLayout
+                    android:id="@+id/logi_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stretchColumns="3">
+
+                    <TableRow android:background="@color/cardview_shadow_start_color">
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="1dp"
+                            android:text="주문번호"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="1dp"
+                            android:text="담당자"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="1dp"
+                            android:text="금액"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="1dp"
+                            android:text="납입기한"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="18dp" />
+
+
+                    </TableRow>
+
+                    <!--A구역-->
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="re01"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="조준석"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="50,000"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018.02.23"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="re01"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="조준석"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="50,000"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018.02.23"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="re01"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="조준석"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="50,000"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018.02.23"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="re01"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="조준석"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="50,000"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018.02.23"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="re01"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="조준석"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="50,000"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018.02.23"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="re01"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="조준석"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="50,000"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018.02.23"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -258,19 +546,157 @@
             android:id="@+id/salesThirdBigLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="10sp"
+            >
 
-            <TextView
-                android:id="@+id/ThirdigDetail1"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="구매 4" />
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/ThirdBigDetail2"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="판매액 달성도"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="구매 5" />
+                android:orientation="horizontal"
+                android:gravity="right"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:text="50,000"
+                    android:textSize="15dp" />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:max="100"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="4dp"
+                    android:progress="50"
+                    android:progressTint="@color/green_teal"
+                    android:tooltipText="10%" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:text="100,000"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="판매액 달성도"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:text="50,000"
+                    android:textSize="15dp" />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:max="100"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="4dp"
+                    android:progress="50"
+                    android:progressTint="@color/green_teal"
+                    android:tooltipText="10%" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:text="100,000"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="판매액 달성도"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:text="50,000"
+                    android:textSize="15dp" />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:max="100"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="4dp"
+                    android:progress="50"
+                    android:progressTint="@color/green_teal"
+                    android:tooltipText="10%" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:text="100,000"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
 
         </LinearLayout>
 

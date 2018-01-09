@@ -235,11 +235,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case "sales":
                         switch (position % 4) {
                             case 0:
-                                return "Selection";
+                                return "매장 기본 정보";
                             case 1:
-                                return "Actualités";
+                                return "매장 거래 내역";
                             case 2:
-                                return "Professionnel";
+                                return "매장 이익 달성도";
                             case 3:
                                 return "Divertissement";
                         }
