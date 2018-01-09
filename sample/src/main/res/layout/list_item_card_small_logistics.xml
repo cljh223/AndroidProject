@@ -2,13 +2,14 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="310dp"
         android:layout_marginBottom="@dimen/cardMarginVertical"
         android:layout_marginLeft="@dimen/cardMarginHorizontal"
         android:layout_marginRight="@dimen/cardMarginHorizontal"
@@ -70,10 +71,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
                     android:text="Total warehouse status : NORMAL\n모든 재고 정보는 어제를 기준으로 합니다"
                     android:textColor="@color/green_teal"
-                    android:textSize="16sp" />
+                    android:textSize="17sp" />
 
             <TableLayout
                 android:id="@+id/logi_progress"
@@ -81,7 +83,7 @@
                 android:layout_height="match_parent"
                 android:stretchColumns="3">
 
-                <TableRow>
+                <TableRow android:background="@color/cardview_shadow_start_color">
 
                     <TextView
                         android:layout_width="70dp"
@@ -89,6 +91,7 @@
                         android:layout_gravity="center"
                         android:layout_margin="1dp"
                         android:text="상품명"
+                        android:textColor="@color/cardview_dark_background"
                         android:textSize="18dp" />
 
                     <TextView
@@ -97,6 +100,7 @@
                         android:layout_gravity="center"
                         android:layout_margin="1dp"
                         android:text="적재구역"
+                        android:textColor="@color/cardview_dark_background"
                         android:textSize="18dp" />
 
                     <TextView
@@ -105,6 +109,7 @@
                         android:layout_gravity="center"
                         android:layout_margin="1dp"
                         android:text="총재고량"
+                        android:textColor="@color/cardview_dark_background"
                         android:textSize="18dp" />
 
                     <TextView
@@ -145,11 +150,12 @@
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="4dp"
                         android:layout_span="2"
                         android:max="100"
-                        android:progress="1" />
+                        android:paddingLeft="15dp"
+                        android:paddingRight="4dp"
+                        android:progress="1"
+                        android:progressTint="@color/green_teal" />
                     <TextView
                         android:id="@+id/index1_1"
                         android:layout_width="wrap_content"
@@ -182,16 +188,18 @@
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
                         android:text="571"/>
+
                     <ProgressBar
                         android:id="@+id/progressBar1_2"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="4dp"
                         android:layout_span="2"
                         android:max="100"
-                        android:progress="1" />
+                        android:paddingLeft="15dp"
+                        android:paddingRight="4dp"
+                        android:progress="1"
+                        android:progressTint="@color/green_teal" />
                     <TextView
                         android:id="@+id/index1_2"
                         android:layout_width="wrap_content"
@@ -223,16 +231,18 @@
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
                         android:text="339"/>
+
                     <ProgressBar
                         android:id="@+id/progressBar1_3"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="4dp"
                         android:layout_span="2"
                         android:max="100"
-                        android:progress="1" />
+                        android:paddingLeft="15dp"
+                        android:paddingRight="4dp"
+                        android:progress="1"
+                        android:progressTint="@android:color/holo_green_dark" />
                     <TextView
                         android:id="@+id/index1_3"
                         android:layout_width="wrap_content"
@@ -264,16 +274,18 @@
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
                         android:text="505"/>
+
                     <ProgressBar
                         android:id="@+id/progressBar1_4"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="4dp"
                         android:layout_span="2"
                         android:max="100"
-                        android:progress="1" />
+                        android:paddingLeft="15dp"
+                        android:paddingRight="4dp"
+                        android:progress="1"
+                        android:progressTint="@android:color/holo_green_light" />
                     <TextView
                         android:id="@+id/index1_4"
                         android:layout_width="wrap_content"
@@ -305,16 +317,18 @@
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
                         android:text="272"/>
+
                     <ProgressBar
                         android:id="@+id/progressBar1_5"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="4dp"
                         android:layout_span="2"
                         android:max="100"
-                        android:progress="1" />
+                        android:paddingLeft="15dp"
+                        android:paddingRight="4dp"
+                        android:progress="1"
+                        android:progressTint="@android:color/holo_orange_light" />
                     <TextView
                         android:id="@+id/index1_5"
                         android:layout_width="wrap_content"
