@@ -55,11 +55,6 @@
                         android:layout_width="50sp"
                         android:layout_height="wrap_content"
                         android:entries="@array/city"></Spinner>
-
-                    <Spinner
-                        android:layout_width="50sp"
-                        android:layout_height="wrap_content"
-                        android:entries="@array/salesShop"></Spinner>
                 </LinearLayout>
 
 
