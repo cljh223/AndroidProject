@@ -8,8 +8,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -23,6 +25,7 @@ import java.util.InputMismatchException;
 public class LoginActivity extends AppCompatActivity {
 
     EditText id, password;
+    TextView idText;
     int i;
     String p;
     ProgressDialog progressDialog;
@@ -39,6 +42,24 @@ public class LoginActivity extends AppCompatActivity {
 
         id.setTextColor(Color.BLACK);
         password.setTextColor(Color.BLACK);
+
+        changeView();
+    }
+
+    //로그인뷰 이벤트
+    public void changeView(){
+        idText = (TextView)findViewById(R.id.idText);
+        id = (EditText)findViewById(R.id.id);
+        id.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+                if (keyEvent.getAction() == KeyEvent.ACTION_DOWN){
+                    Log.v("유저네임텍스트 사이즈", idText.getTextSize()+"");
+                }
+
+                return false;
+            }
+        });
     }
 
     //버튼 이벤트
@@ -62,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     class SendThread extends Thread {
-        String address = "http://192.168.0.14:8888/www/loginAndroid?staff_code=" + i + "&staff_password=" + p;
+        String address = "http://203.233.199.126:8811/www/loginAndroid?staff_code=" + i + "&staff_password=" + p;
 
         // 주소, URL 객체
         public void run() {

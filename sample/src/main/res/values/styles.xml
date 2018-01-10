@@ -38,4 +38,9 @@
         <item name="android:background">@color/colorPrimaryDark</item>
     </style>
 
+    <!--메뉴바 글씨크기-->
+    <style name="MyMenu">
+        <item name="android:textSize">32dp</item>
+    </style>
+
 </resources>
