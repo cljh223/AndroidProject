@@ -1,0 +1,130 @@
+diff a/sample/src/main/java/com/github/florent37/materialviewpager/sample/FirstTestRecyclerViewAdapter.java b/sample/src/main/java/com/github/florent37/materialviewpager/sample/FirstTestRecyclerViewAdapter.java	(rejected hunks)
+@@ -34,6 +34,10 @@
+     ProgressDialog progressDialog;
+     ImageView radioImg1;
+     ImageView ramenImg1;
++    TextView ramenName;
++    TextView district;
++    TextView usage;
++    TextView amount;
+ 
+     public FirstTestRecyclerViewAdapter(List<Object> contents) {
+         this.contents = contents;
+@@ -105,9 +109,6 @@
+                     case TYPE_HEADER: {
+                         view = LayoutInflater.from(parent.getContext())
+                                 .inflate(R.layout.list_item_card_small_logistics, parent, false);
+-                        Log.v("여기", "에서 작은카드 붙음");
+-                        /*Intent intent = new Intent(this, logi_SmallActivity.class);
+-                        startActivity(intent);*/
+                         view.findViewById(R.id.logisticsFirstSmallLayout).setVisibility(View.VISIBLE);
+                         view.findViewById(R.id.logisticsSecondSmallLayout).setVisibility(View.GONE);
+                         view.findViewById(R.id.logisticsThirdSmallLayout).setVisibility(View.GONE);
+@@ -162,6 +163,11 @@
+         Log.v("하잇", "=======>여기로 들어옴");
+         radioImg1 = view.findViewById(R.id.radioImg1);
+         ramenImg1 = view.findViewById(R.id.ramenImg1);
++        ramenName = view.findViewById(R.id.ramenName1);
++        district = view.findViewById(R.id.district1);
++        usage = view.findViewById(R.id.usage1);
++        amount = view.findViewById(R.id.amount1);
++
+ 
+         /*라디오버튼1_1*/
+         RadioButton btn11 = view.findViewById(R.id.logi_button11);
+@@ -170,6 +176,10 @@
+             public void onClick(View view) {
+                 radioImg1.setImageResource(R.drawable.logi_11);
+                 ramenImg1.setImageResource(R.drawable.ansung_ramen);
++                ramenName.setText("안성탕면");
++                district.setText("A구역 / 30㎢");
++                usage.setText("55%");
++                amount.setText("338개");
+             }
+         });
+ 
+@@ -180,6 +190,10 @@
+             public void onClick(View view) {
+                 radioImg1.setImageResource(R.drawable.logi_12);
+                 ramenImg1.setImageResource(R.drawable.sin_ramen);
++                ramenName.setText("신라면");
++                district.setText("B구역 / 45㎢");
++                usage.setText("67%");
++                amount.setText("412개");
+             }
+         });
+ 
+@@ -190,6 +204,10 @@
+             public void onClick(View view) {
+                 radioImg1.setImageResource(R.drawable.logi_13);
+                 ramenImg1.setImageResource(R.drawable.nugool_ramen);
++                ramenName.setText("너구리");
++                district.setText("C구역 / 45㎢");
++                usage.setText("71%");
++                amount.setText("505개");
+             }
+         });
+ 
+@@ -200,6 +218,10 @@
+             public void onClick(View view) {
+                 radioImg1.setImageResource(R.drawable.logi_14);
+                 ramenImg1.setImageResource(R.drawable.anchovy_ramen);
++                ramenName.setText("멸치칼국수");
++                district.setText("D구역 / 45㎢");
++                usage.setText("80%");
++                amount.setText("571개");
+             }
+         });
+ 
+@@ -210,25 +232,38 @@
+             public void onClick(View view) {
+                 radioImg1.setImageResource(R.drawable.logi_15);
+                 ramenImg1.setImageResource(R.drawable.sari_ramen);
++                ramenName.setText("사리곰탕");
++                district.setText("E구역 / 45㎢");
++                usage.setText("92%");
++                amount.setText("603개");
+             }
+         });
+     }
+ 
+     public void progressBarChange(View view){
+         /*ProgressBar 수치 변경*/
+-        ProgressBar progressBar1 = (ProgressBar)view.findViewById(R.id.progressBar1_1);
+-        progressBar1.setProgress(50);
+-        ProgressBar progressBar2 = (ProgressBar)view.findViewById(R.id.progressBar1_2);
+-        progressBar2.setProgress(60);
+-        ProgressBar progressBar3 = (ProgressBar)view.findViewById(R.id.progressBar1_3);
+-        progressBar3.setProgress(70);
+-        ProgressBar progressBar4 = (ProgressBar)view.findViewById(R.id.progressBar1_4);
+-        progressBar4.setProgress(80);
+-        ProgressBar progressBar5 = (ProgressBar)view.findViewById(R.id.progressBar1_5);
+-        progressBar5.setProgress(90);
+-
+-        TextView textView = (TextView)view.findViewById(R.id.index1_1);
+-        textView.setText("50%");
++        ProgressBar progressBar11 = (ProgressBar)view.findViewById(R.id.progressBar1_1);
++        progressBar11.setProgress(55);
++        ProgressBar progressBar12 = (ProgressBar)view.findViewById(R.id.progressBar1_2);
++        progressBar12.setProgress(67);
++        ProgressBar progressBar13 = (ProgressBar)view.findViewById(R.id.progressBar1_3);
++        progressBar13.setProgress(71);
++        ProgressBar progressBar14 = (ProgressBar)view.findViewById(R.id.progressBar1_4);
++        progressBar14.setProgress(80);
++        ProgressBar progressBar15 = (ProgressBar)view.findViewById(R.id.progressBar1_5);
++        progressBar15.setProgress(92);
++
++        /*ProgressBar 텍스트 변경*/
++        TextView textView11 = (TextView)view.findViewById(R.id.index1_1);
++        textView11.setText("55%");
++        TextView textView12 = (TextView)view.findViewById(R.id.index1_2);
++        textView12.setText("67%");
++        TextView textView13 = (TextView)view.findViewById(R.id.index1_3);
++        textView13.setText("71%");
++        TextView textView14 = (TextView)view.findViewById(R.id.index1_4);
++        textView14.setText("80%");
++        TextView textView15 = (TextView)view.findViewById(R.id.index1_5);
++        textView15.setText("92%");
+     }
+ 
+     @Override
