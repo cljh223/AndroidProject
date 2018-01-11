@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="ramen">
+        <item>안성탕면</item>
+        <item>신라면</item>
+        <item>너구리</item>
+        <item>멸치칼국수라면</item>
+        <item>사리곰탕</item>
+    </string-array>
+
+</resources>

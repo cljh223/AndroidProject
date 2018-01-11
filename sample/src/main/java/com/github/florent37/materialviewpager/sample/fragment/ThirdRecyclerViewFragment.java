@@ -10,9 +10,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.github.florent37.materialviewpager.header.MaterialViewPagerHeaderDecorator;
 import com.github.florent37.materialviewpager.sample.FirstTestRecyclerViewAdapter;
+import com.github.florent37.materialviewpager.sample.MainActivity;
 import com.github.florent37.materialviewpager.sample.R;
 import com.github.florent37.materialviewpager.sample.ThirdTestRecyclerViewAdapter;
 
@@ -39,7 +43,9 @@ public class ThirdRecyclerViewFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         return inflater.inflate(R.layout.fragment_recyclerview, container, false);
+
     }
 
     @Override
@@ -66,6 +72,8 @@ public class ThirdRecyclerViewFragment extends Fragment {
         //Use this now
 
         Log.v("여기야===================>", "여기");
+
+
         mRecyclerView.addItemDecoration(new MaterialViewPagerHeaderDecorator());
         mRecyclerView.setAdapter(new ThirdTestRecyclerViewAdapter(items));
 
