@@ -325,6 +325,8 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
 
     public void RadioGet(View view){
         rb1 = view.findViewById(R.id.rd_man);
+        rb1.setChecked(true);
+        radioResult = rb1.getText().toString();
         rb1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -353,7 +355,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
         amountResult = editText.getText().toString();
         if(spinnerResult.equals("안성탕면")&&radioResult.equals("MAN")){
             r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 인원수는");
+            r_param.setText("필요한 예상 투입인원은");
             r_amount.setText("9.2명 입니다.");
             r_amount.setTextSize(20);
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
@@ -369,7 +371,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
         }else if(spinnerResult.equals("안성탕면")&&radioResult.equals("COST")){
             r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 비용은");
+            r_param.setText("필요한 예상 재료비용은");
             r_amount.setText(" 314,100원 입니다.");
             r_amount.setTextSize(20);
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
@@ -379,7 +381,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
 
         if(spinnerResult.equals("신라면")&&radioResult.equals("MAN")){
             r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 인원수는");
+            r_param.setText("필요한 예상 투입인원은");
             r_amount.setText("8.7명 입니다.");
             r_amount.setTextSize(20);
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
@@ -395,7 +397,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
         }else if(spinnerResult.equals("신라면")&&radioResult.equals("COST")){
             r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 비용은");
+            r_param.setText("필요한 예상 재료비용은");
             r_amount.setText(" 290,300원 입니다.");
             r_amount.setTextSize(20);
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
@@ -405,7 +407,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
 
         if(spinnerResult.equals("너구리")&&radioResult.equals("MAN")){
             r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 인원수는");
+            r_param.setText("필요한 예상 투입인원은");
             r_amount.setText("12.1명 입니다.");
             r_amount.setTextSize(20);
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
@@ -421,7 +423,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
         }else if(spinnerResult.equals("너구리")&&radioResult.equals("COST")){
             r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 비용은");
+            r_param.setText("필요한 예상 재료비용은");
             r_amount.setText(" 344,200원 입니다.");
             r_amount.setTextSize(20);
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
@@ -431,7 +433,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
 
         if(spinnerResult.equals("멸치칼국수라면")&&radioResult.equals("MAN")){
             r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 인원수는");
+            r_param.setText("필요한 예상 투입인원은");
             r_amount.setText("9.4명 입니다.");
             r_amount.setTextSize(20);
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
@@ -447,7 +449,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
         }else if(spinnerResult.equals("멸치칼국수라면")&&radioResult.equals("COST")){
             r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 비용은");
+            r_param.setText("필요한 예상 재료비용은");
             r_amount.setText(" 298,300원 입니다.");
             r_amount.setTextSize(20);
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
@@ -457,7 +459,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
 
         if(spinnerResult.equals("사리곰탕")&&radioResult.equals("MAN")){
             r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 인원수는");
+            r_param.setText("필요한 예상 투입인원은");
             r_amount.setText("9.8명 입니다.");
             r_amount.setTextSize(20);
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
@@ -473,7 +475,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
         }else if(spinnerResult.equals("사리곰탕")&&radioResult.equals("COST")){
             r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 비용은");
+            r_param.setText("필요한 예상 재료비용은");
             r_amount.setText(" 310,700원 입니다.");
             r_amount.setTextSize(20);
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);

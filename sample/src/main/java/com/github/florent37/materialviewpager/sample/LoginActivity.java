@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     class SendThread extends Thread {
-        String address = "http://203.233.199.126:8811/kilhaProject2/loginAndroid?staff_code=" + i + "&staff_password=" + p;
+        String address = "http://10.10.12.29:8088/kilhaProject2/loginAndroid?staff_code=" + i + "&staff_password=" + p;
 
         // 주소, URL 객체
         public void run() {

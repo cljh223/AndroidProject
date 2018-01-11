@@ -1602,7 +1602,8 @@
                     android:id="@+id/amount"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="예상 생산량 입력"
+                    android:hint="예상 생산량 입력"
+                    android:text=""
                     android:textColor="#424242"
                     />
                 <Button

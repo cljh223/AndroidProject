@@ -7,19 +7,23 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/purchaseMenu"
+            android:icon="@drawable/icon_purchase1"
             android:title="구매"
             />
 
         <item
             android:id="@+id/productionMenu"
+            android:icon="@drawable/icon_production1"
             android:title="생산" />
 
         <item
             android:id="@+id/logisticsMenu"
+            android:icon="@drawable/icon_logistics1"
             android:title="물류"/>
 
         <item
             android:id="@+id/salesMenu"
+            android:icon="@drawable/icon_sales1"
             android:title="영업"/>
     </group>
 
