@@ -5,10 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.List;
@@ -23,6 +25,8 @@ public class SecondTestRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
     static final int TYPE_HEADER = 0;
     static final int TYPE_CELL = 1;
 
+    static String shopWhere = new FirstTestRecyclerViewAdapter().shopWhere;
+
     TextView textView;
     String jsontext;
     ProgressDialog progressDialog;
@@ -32,6 +36,8 @@ public class SecondTestRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
     TextView district;
     TextView usage;
     TextView amount;
+
+    View view2 = null;
 
     public SecondTestRecyclerViewAdapter(List<Object> contents) {
         this.contents = contents;
@@ -130,6 +136,39 @@ public class SecondTestRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
                     case TYPE_HEADER: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_small_sales, parent, false);
+
+                        view2 = LayoutInflater.from(parent.getContext())
+                                .inflate(R.layout.list_item_card_big_sales, parent, false);
+
+                        Spinner s = (Spinner) view.findViewById(R.id.salesSpinner);
+                        final TextView textView = (TextView) view.findViewById(R.id.salesFirstSmallLayoutTitle);
+                        s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> parent, View view,
+                                                       int position, long id) {
+
+                                switch (String.valueOf(parent.getItemAtPosition(position))) {
+                                    case "롯데마트 삼성점":
+                                        shopWhere = "롯데마트 삼성점";
+                                        view2.findViewById(R.id.firstShopLayout).setVisibility(View.VISIBLE);
+                                        view2.findViewById(R.id.secondShopLayout).setVisibility(View.GONE);
+
+                                        break;
+                                    case "GS수퍼마켓 강남대치점":
+                                        shopWhere = "GS수퍼마켓 강남대치점";
+                                        view2.findViewById(R.id.firstShopLayout).setVisibility(View.GONE);
+                                        view2.findViewById(R.id.secondShopLayout).setVisibility(View.VISIBLE);
+                                        break;
+                                }
+                                textView.setText(shopWhere);
+                            }
+
+                            @Override
+                            public void onNothingSelected(AdapterView<?> parent) {
+                            }
+                        });
+
+
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
@@ -143,7 +182,6 @@ public class SecondTestRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
                         };
                     }
                 }
-
 
                 return new RecyclerView.ViewHolder(view) {
                 };
