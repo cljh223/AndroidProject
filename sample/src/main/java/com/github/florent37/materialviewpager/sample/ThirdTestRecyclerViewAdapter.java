@@ -1,29 +1,15 @@
 package com.github.florent37.materialviewpager.sample;
 
 import android.app.ProgressDialog;
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.github.florent37.materialviewpager.sample.fragment.ThirdRecyclerViewFragment;
 
 import java.util.List;
 
@@ -42,22 +28,6 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     ProgressDialog progressDialog;
     ImageView radioImg3;
     ImageView ramenImg3;
-
-    //생산 부문 멤버
-    LinearLayout resultlayout;
-    TextView r_name;
-    TextView r_param;
-    TextView r_amount;
-    TextView notify;
-    String spinnerResult;
-    String radioResult;
-    String amountResult;
-    RadioGroup rg;
-    RadioButton rb;
-    EditText editText;
-    RadioButton rb1;
-    RadioButton rb2;
-    RadioButton rb3;
 
     public ThirdTestRecyclerViewAdapter(List<Object> contents) {
         this.contents = contents;
@@ -120,22 +90,6 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                         view.findViewById(R.id.productionFirstBigLayout).setVisibility(View.GONE);
                         view.findViewById(R.id.productionSecondBigLayout).setVisibility(View.GONE);
                         view.findViewById(R.id.productionThirdBigLayout).setVisibility(View.VISIBLE);
-
-                        SpinnerSet(view);
-                        RadioGet(view);
-                        r_name = view.findViewById(R.id.notify1);
-                        r_param = view.findViewById(R.id.notify2);
-                        r_amount = view.findViewById(R.id.notify3);
-                        notify = view.findViewById(R.id.notify4);
-                        editText = view.findViewById(R.id.amount);
-
-                        Button btn = view.findViewById(R.id.btn_predict);
-                        btn.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                ResultSet();//예측 결과 메소드
-                            }
-                        });
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
@@ -263,183 +217,6 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
 
         TextView textView = (TextView)view.findViewById(R.id.index3_1);
         textView.setText("70%");
-    }
-
-    //생산 부문 스피너
-    public void SpinnerSet(View view){
-        Spinner ramenSpinner = view.findViewById(R.id.r_name);
-        ArrayAdapter<CharSequence> ramenAdapter = ArrayAdapter.createFromResource(view.getContext(), R.array.ramen, android.R.layout.simple_spinner_item);
-        ramenAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        ramenSpinner.setAdapter(ramenAdapter);
-        ramenSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
-                ((TextView) view).setTextColor(Color.BLACK);
-                spinnerResult = parent.getItemAtPosition(position).toString();
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
-    }
-
-    public void RadioGet(View view){
-        rb1 = view.findViewById(R.id.rd_man);
-        rb1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                radioResult = rb1.getText().toString();
-            }
-        });
-        rb2 = view.findViewById(R.id.rd_time);
-        rb2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                radioResult = rb2.getText().toString();
-            }
-        });
-        rb3 = view.findViewById(R.id.rd_cost);
-        rb3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                radioResult = rb3.getText().toString();
-            }
-        });
-    }
-
-
-    //생산부문 예측 결과
-    public void ResultSet(){
-        amountResult = editText.getText().toString();
-        if(spinnerResult.equals("안성탕면")&&radioResult.equals("MAN")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 인원수는");
-            r_amount.setText("9.2명 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("안성탕면")&&radioResult.equals("TIME")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 생산시간은");
-            r_amount.setText("12.6일 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("안성탕면")&&radioResult.equals("COST")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 비용은");
-            r_amount.setText(" 314,100원 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }
-
-        if(spinnerResult.equals("신라면")&&radioResult.equals("MAN")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 인원수는");
-            r_amount.setText("8.7명 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("신라면")&&radioResult.equals("TIME")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 생산시간은");
-            r_amount.setText("10.4일 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("신라면")&&radioResult.equals("COST")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 비용은");
-            r_amount.setText(" 290,300원 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }
-
-        if(spinnerResult.equals("너구리")&&radioResult.equals("MAN")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 인원수는");
-            r_amount.setText("12.1명 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("너구리")&&radioResult.equals("TIME")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 생산시간은");
-            r_amount.setText("11.6일 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("너구리")&&radioResult.equals("COST")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 비용은");
-            r_amount.setText(" 344,200원 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }
-
-        if(spinnerResult.equals("멸치칼국수라면")&&radioResult.equals("MAN")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 인원수는");
-            r_amount.setText("9.4명 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("멸치칼국수라면")&&radioResult.equals("TIME")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 생산시간은");
-            r_amount.setText("10.9일 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("멸치칼국수라면")&&radioResult.equals("COST")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 비용은");
-            r_amount.setText(" 298,300원 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }
-
-        if(spinnerResult.equals("사리곰탕")&&radioResult.equals("MAN")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 인원수는");
-            r_amount.setText("9.8명 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("사리곰탕")&&radioResult.equals("TIME")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 생산시간은");
-            r_amount.setText("9.3일 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("사리곰탕")&&radioResult.equals("COST")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
-            r_param.setText("필요한 예상 비용은");
-            r_amount.setText(" 310,700원 입니다.");
-            r_amount.setTextSize(20);
-            r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
-            r_amount.setTextColor(Color.BLUE);
-            notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }
     }
 
 

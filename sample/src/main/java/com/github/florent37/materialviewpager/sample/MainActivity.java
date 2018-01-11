@@ -16,12 +16,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -90,7 +88,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
             });
         }
-
 
 
         setNavigationViewListener();
@@ -213,11 +210,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case "production":
                         switch (position % 4) {
                             case 0:
-                                return "제 1공장 정보";
+                                return "안녕";
                             case 1:
-                                return "제 2공장 정보";
+                                return "Actualités";
                             case 2:
-                                return "예측 분석";
+                                return "Professionnel";
                             case 3:
                                 return "Divertissement";
                         }
@@ -282,9 +279,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mViewPager.getViewPager().setOffscreenPageLimit(mViewPager.getViewPager().getAdapter().getCount());
         mViewPager.getPagerTitleStrip().setViewPager(mViewPager.getViewPager());
-}
-
-
+    }
 
 }
 
