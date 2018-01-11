@@ -36,6 +36,10 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     ProgressDialog progressDialog;
     ImageView radioImg1;
     ImageView ramenImg1;
+    TextView ramenName;
+    TextView district;
+    TextView usage;
+    TextView amount;
 
     public FirstTestRecyclerViewAdapter(List<Object> contents) {
         this.contents = contents;
@@ -171,6 +175,10 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
         Log.v("하잇", "=======>여기로 들어옴");
         radioImg1 = view.findViewById(R.id.radioImg1);
         ramenImg1 = view.findViewById(R.id.ramenImg1);
+        ramenName = view.findViewById(R.id.ramenName1);
+        district = view.findViewById(R.id.district1);
+        usage = view.findViewById(R.id.usage1);
+        amount = view.findViewById(R.id.amount1);
 
         /*라디오버튼1_1*/
         RadioButton btn11 = view.findViewById(R.id.logi_button11);
@@ -179,6 +187,11 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             public void onClick(View view) {
                 radioImg1.setImageResource(R.drawable.logi_11);
                 ramenImg1.setImageResource(R.drawable.ansung_ramen);
+                ramenName.setText("안성탕면");
+                district.setText("A구역 / 45㎢");
+                usage.setText("68%");
+                amount.setText("420개");
+
             }
         });
 
@@ -189,6 +202,10 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             public void onClick(View view) {
                 radioImg1.setImageResource(R.drawable.logi_12);
                 ramenImg1.setImageResource(R.drawable.sin_ramen);
+                ramenName.setText("신라면");
+                district.setText("B구역 / 45㎢");
+                usage.setText("67%");
+                amount.setText("412개");
             }
         });
 
@@ -199,6 +216,10 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             public void onClick(View view) {
                 radioImg1.setImageResource(R.drawable.logi_13);
                 ramenImg1.setImageResource(R.drawable.nugool_ramen);
+                ramenName.setText("너구리");
+                district.setText("C구역 / 45㎢");
+                usage.setText("71%");
+                amount.setText("505개");
             }
         });
 
@@ -209,6 +230,10 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             public void onClick(View view) {
                 radioImg1.setImageResource(R.drawable.logi_14);
                 ramenImg1.setImageResource(R.drawable.anchovy_ramen);
+                ramenName.setText("멸치칼국수");
+                district.setText("D구역 / 45㎢");
+                usage.setText("80%");
+                amount.setText("571개");
             }
         });
 
@@ -219,6 +244,10 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             public void onClick(View view) {
                 radioImg1.setImageResource(R.drawable.logi_15);
                 ramenImg1.setImageResource(R.drawable.sari_ramen);
+                ramenName.setText("사리곰탕");
+                district.setText("E구역 / 45㎢");
+                usage.setText("92%");
+                amount.setText("603개");
             }
         });
     }
