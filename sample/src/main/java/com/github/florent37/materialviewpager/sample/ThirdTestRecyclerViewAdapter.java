@@ -139,7 +139,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
-                }
+                } 
             case "logistics":
                 switch (viewType) {
                     case TYPE_HEADER: {
