@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.v7.widget.CardView
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/cardMarginVertical"
         android:layout_marginLeft="@dimen/cardMarginHorizontal"
         android:layout_marginRight="@dimen/cardMarginHorizontal"
@@ -21,19 +22,25 @@
             android:id="@+id/purchaseFirstSmallLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
+            <ImageView
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/searchand"/>
             <TextView
-                android:id="@+id/firstBigDetail1"
-                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="구매 1" />
+                android:text="원재료 정보"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="28sp"
+                />
 
-            <TextView
-                android:id="@+id/firstBigDetail2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="구매 2" />
 
         </LinearLayout>
 
@@ -41,19 +48,26 @@
             android:id="@+id/purchaseSecondSmallLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/progressand"/>
             <TextView
-                android:id="@+id/purchaseSecondBigDetail1"
-                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="구매 3" />
+                android:text="업무 진행상황"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="28sp"
+                />
 
-            <TextView
-                android:id="@+id/purchaseSecondBigDetail2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="구매 3" />
+
 
         </LinearLayout>
 
@@ -61,19 +75,25 @@
             android:id="@+id/purchaseThirdSmallLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/documentand"/>
             <TextView
-                android:id="@+id/ThirdigDetail1"
-                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="구매 4" />
+                android:text="업무 기록정보"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="28sp"
+                />
 
-            <TextView
-                android:id="@+id/ThirdBigDetail2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="구매 5" />
+
 
         </LinearLayout>
 

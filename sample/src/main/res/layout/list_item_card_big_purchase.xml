@@ -8,7 +8,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/cardMarginVertical"
         android:layout_marginLeft="@dimen/cardMarginHorizontal"
         android:layout_marginRight="@dimen/cardMarginHorizontal"
@@ -23,22 +23,1243 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/firstBigDetail1"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="구매 1"
-                />
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/anchovy"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/anchovy"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/firstBigDetail2"
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="말린멸치"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="3500kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦11,456"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦12,758"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="구매 2"
-                />
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/driedbeef"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/driedbeef"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-        </LinearLayout>
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="말린소고기"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="2200kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦14,850"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦16,817"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/carrot"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/carrot"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="당근"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="2500kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦955"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦1,068"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/garlic"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/garlic"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="마늘"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="6000kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦6,120"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦5,725"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/mushroom"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/mushroom"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="말린버섯"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="2500kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦32,110"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦32,708"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/onion"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/onion"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="양파"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="8000kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦2,150"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦2,004"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/palmoil"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/palmoil"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="팜오일"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="6000kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦14,550"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦15,552"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/potatostarch"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/potatostarch"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="감자전분"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="5500kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦1,580"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦2,406"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/redpepperpowder"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/redpepperpowder"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="고추가루"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="4000kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦14,880"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦13,923"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/salt"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/salt"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="소금"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="5000kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦1,850"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦1,606"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/seaweed"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/seaweed"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="말린미역"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="1500kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦17,150"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦18,615"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/sugar"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/sugar"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="설탕"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="3300kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦1,150"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦1,129"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/wheat"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/wheat"/>
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TableLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow android:background="@color/cardview_shadow_start_color">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Factor"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="17dp"
+                                android:text="Detail"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="원재료명"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="밀가루"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="재고량"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="9500kg"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text=" 평균구매가  "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦1,280"/>
+                        </TableRow>
+                        <TableRow>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="현재가격"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="16dp"
+                                android:text="￦1,240"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>-->
 
         <LinearLayout
             android:id="@+id/purchaseSecondBigLayout"
@@ -46,21 +1267,445 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/purchaseSecondBigDetail1"
+            <EditText
+                android:id="@+id/search_process"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="업무코드를 입력하세요"
+                android:textColor="@color/cardview_dark_background"
+                android:maxLength="100"
+                android:singleLine="true"
+
+                />
+            <Button
+                android:id="@+id/search_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="구매 3"
+                android:text="검색"
+                android:textColor="@color/cardview_dark_background"
                 />
+            <!-- <Button
+                 android:id="@+id/allsearch_btn"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="전체보기"
+                 android:textColor="@color/cardview_dark_background"
+                 />-->
 
-            <TextView
-                android:id="@+id/purchaseSecondBigDetail2"
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="구매 3"
-                />
+                android:layout_height="wrap_content">
+                <TableLayout
 
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stretchColumns="3">
+
+                    <TableRow android:background="@color/cardview_shadow_start_color">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="1dp"
+                            android:text="진행상태"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="1dp"
+                            android:text="담당자"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="1dp"
+                            android:text="신청인"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="1dp"
+                            android:text="업무코드"
+                            android:textSize="18dp" />
+                    </TableRow>
+
+
+                    <TableRow
+
+                        android:id="@+id/plist01"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:text="접수대기"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="이재준"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="정우석"
+
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/code1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="193825818"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+
+                    <TableRow
+
+                        android:id="@+id/plist02">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:text="접수대기"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="이재준"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="정우석"/>
+
+                        <TextView
+                            android:id="@+id/code2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="652348952"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+                    </TableRow>
+
+
+                    <TableRow
+
+                        android:id="@+id/plist03">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="처리중"
+                            android:textColor="@color/blue"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="이재준"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="정우석"/>
+
+                        <TextView
+                            android:id="@+id/code3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="653145297"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+                    </TableRow>
+
+
+                    <TableRow
+
+                        android:id="@+id/plist04">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="접수대기"
+                            android:textColor="@android:color/holo_red_dark"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="이재준"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="정우석"/>
+
+                        <TextView
+                            android:id="@+id/code4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="243975168"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+                    </TableRow>
+
+
+                    <TableRow
+
+                        android:id="@+id/plist05">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="처리중"
+                            android:textColor="@color/blue"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="이재준"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="정우석"/>
+
+                        <TextView
+                            android:id="@+id/code5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="548972134"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+                    </TableRow>
+
+                    <TableRow
+
+                        android:id="@+id/plist06">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="처리중"
+                            android:textSize="16dp"
+                            android:textColor="@color/blue"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="이재준"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="정우석"/>
+
+                        <TextView
+                            android:id="@+id/code6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="456879213"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow
+
+                        android:id="@+id/plist07">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="완료"
+                            android:textColor="@color/green"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="이재준"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="정우석"/>
+
+                        <TextView
+                            android:id="@+id/code7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="784713954"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow
+
+                        android:id="@+id/plist08">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="처리중"
+                            android:textColor="@color/blue"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="이재준"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="정우석"/>
+
+                        <TextView
+                            android:id="@+id/code8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="139642817"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow
+
+                        android:id="@+id/plist09">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="완료"
+                            android:textColor="@color/green"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="이재준"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="정우석"/>
+
+                        <TextView
+                            android:id="@+id/code9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="273946817"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow
+
+                        android:id="@+id/plist10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="완료"
+                            android:textColor="@color/green"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="이재준"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="정우석"/>
+
+                        <TextView
+                            android:id="@+id/code10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="367194382"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+
+                </TableLayout>
+            </LinearLayout>
         </LinearLayout>
+
+
+
+
+
 
         <LinearLayout
             android:id="@+id/purchaseThirdBigLayout"
@@ -68,19 +1713,713 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/ThirdigDetail1"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="구매 4"
-                />
+                android:layout_height="wrap_content">
+                <TableLayout
 
-            <TextView
-                android:id="@+id/ThirdBigDetail2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="구매 5"
-                />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stretchColumns="3">
+
+                    <TableRow android:background="@color/cardview_shadow_start_color">
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="1dp"
+                            android:text="거래일"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="1dp"
+                            android:text="상품명"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="1dp"
+                            android:text="매매타입"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="1dp"
+                            android:text="수량"
+                            android:textSize="18dp" />
+
+                    </TableRow>
+
+                    <!--A구역-->
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-10"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="carrot"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="매수"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="1000kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-10"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="wheat"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="매도"
+                            android:textColor="@color/blue"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="5000kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-09"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="driedbeef"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="생산부"
+                            android:textColor="@color/green"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="4000kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-09"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="mushroom"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="생산부"
+                            android:textColor="@color/green"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="3500kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-09"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="anchovy"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="매수"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="6000kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-08"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="wheat"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="매수"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="4500kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-08"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="seaweed"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="매도"
+                            android:textColor="@color/blue"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2500kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-07"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="palmoil"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="매도"
+                            android:textColor="@color/blue"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2000kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-06"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="onion"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="생산부"
+                            android:textColor="@color/green"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="3500kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-06"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="salt"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="생산부"
+                            android:textColor="@color/green"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="3000kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-06"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="sugar"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="생산부"
+                            android:textColor="@color/green"
+                            android:textSize="16dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="4500kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-06"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="redpepperpowder"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="매수"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="3000kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-05"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="potatostarch"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="매수"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2500kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-05"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="wheat"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="매도"
+                            android:textColor="@color/blue"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="8000kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-04"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="mushroom"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="매수"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="4000kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2018-01-04"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="seaweed"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="매수"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="1500kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+                    </TableRow>
+
+
+                    <!--B구역-->
+                    <TableRow
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="2018-01-03"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="carrot"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:textColor="@color/blue"
+                            android:text="매도"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="3500kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+                    </TableRow>
+
+                    <!--C구역-->
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="2018-01-02"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="driedbeef"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:textColor="@color/green"
+                            android:text="생산부"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2000kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+                    </TableRow>
+
+                    <!--D구역-->
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="2018-01-02"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="onion"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:textColor="@color/green"
+                            android:text="생산부"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="4000kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+                    </TableRow>
+
+                    <!--E구역-->
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="2018-01-02"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:text="anchovy"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            android:textColor="@color/green"
+                            android:text="생산부"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="3500kg"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16dp" />
+                    </TableRow>
+
+
+                </TableLayout>
+
+
+            </LinearLayout>
 
         </LinearLayout>
 

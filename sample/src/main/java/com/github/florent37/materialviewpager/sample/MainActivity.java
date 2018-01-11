@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void run()
             {
                 mProgressDialog = ProgressDialog.show(MainActivity.this,"",
-                        "잠시만 기다려 주세요.",true);
+                        "데이터 로딩중...",true);
                 mHandler.postDelayed( new Runnable()
                 {
                     @Override
@@ -241,9 +241,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             case 0:
                                 return "가격 및 재고";
                             case 1:
-                                return "Actualités";
+                                return "업무 진행상황";
                             case 2:
-                                return "Professionnel";
+                                return "업무 상세기록";
                             case 3:
                                 return "Divertissement";
                         }

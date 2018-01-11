@@ -2,6 +2,7 @@ package com.github.florent37.materialviewpager.sample;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.text.Layout;
 import android.util.Log;
@@ -149,6 +150,9 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                     case TYPE_HEADER: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_small_sales, parent, false);
+                        view.findViewById(R.id.salesFirstSmallLayout).setVisibility(View.VISIBLE);
+                        view.findViewById(R.id.salesSecondSmallLayout).setVisibility(View.GONE);
+                        view.findViewById(R.id.salesThirdSmallLayout).setVisibility(View.GONE);
 
                         view2 = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_big_sales, parent, false);
@@ -161,7 +165,7 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                             public void onItemSelected(AdapterView<?> parent, View view,
                                                        int position, long id) {
 
-
+                                ((TextView) view).setTextColor(Color.BLACK);
                                 switch (String.valueOf(parent.getItemAtPosition(position))) {
                                     case "롯데마트 삼성점":
                                         shopWhere = "롯데마트 삼성점";
@@ -175,7 +179,7 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                                         view2.findViewById(R.id.secondShopLayout).setVisibility(View.VISIBLE);
                                         break;
                                 }
-                                textView.setText(shopWhere);
+                                /*textView.setText(shopWhere);*/
                             }
 
                             @Override

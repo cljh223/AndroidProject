@@ -620,7 +620,7 @@
                         android:layout_marginBottom="20dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
-                        android:text="최근 열개의 항목을 표시합니다."
+                        android:text="최근 거래 내역을 표시합니다."
                         android:textColor="@color/green_teal"
                         android:textSize="17sp" />
 
@@ -985,7 +985,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="re14"
+                                android:text="re12"
                                 android:textSize="16dp" />
 
                             <TextView
@@ -999,7 +999,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="12,400"
+                                android:text="24,800"
                                 android:textColor="@android:color/holo_orange_light"
                                 android:textSize="16dp" />
 
@@ -1007,7 +1007,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="2017.11.25"
+                                android:text="2017.11.23"
                                 android:textColor="@android:color/holo_orange_light"
                                 android:textSize="16dp" />
 
@@ -1018,7 +1018,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="re14"
+                                android:text="re11"
                                 android:textSize="16dp" />
 
                             <TextView
@@ -1032,7 +1032,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="12,400"
+                                android:text="33,100"
                                 android:textColor="@android:color/holo_orange_light"
                                 android:textSize="16dp" />
 
@@ -1040,7 +1040,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="2017.11.25"
+                                android:text="2017.11.20"
                                 android:textColor="@android:color/holo_orange_light"
                                 android:textSize="16dp" />
 
@@ -1051,7 +1051,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="re14"
+                                android:text="re08"
                                 android:textSize="16dp" />
 
                             <TextView
@@ -1065,7 +1065,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="12,400"
+                                android:text="20,700"
                                 android:textColor="@android:color/holo_orange_light"
                                 android:textSize="16dp" />
 
@@ -1073,7 +1073,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="2017.11.25"
+                                android:text="2017.11.19"
                                 android:textColor="@android:color/holo_orange_light"
                                 android:textSize="16dp" />
 
@@ -1084,7 +1084,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="re14"
+                                android:text="re06"
                                 android:textSize="16dp" />
 
                             <TextView
@@ -1098,7 +1098,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="12,400"
+                                android:text="19,400"
                                 android:textColor="@android:color/holo_orange_light"
                                 android:textSize="16dp" />
 
@@ -1106,7 +1106,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="2017.11.25"
+                                android:text="2017.11.17"
                                 android:textColor="@android:color/holo_orange_light"
                                 android:textSize="16dp" />
 
@@ -1185,7 +1185,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="5dp"
-                    android:text="120,400"
+                    android:text="260,000"
                     android:textSize="15dp" />
 
                 <ProgressBar
@@ -1196,7 +1196,7 @@
                     android:max="100"
                     android:paddingLeft="15dp"
                     android:paddingRight="4dp"
-                    android:progress="6"
+                    android:progress="52"
                     android:progressTint="@color/green_teal" />
 
                 <TextView
@@ -1232,7 +1232,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="5dp"
-                    android:text="42,200"
+                    android:text="122,040"
                     android:textSize="15dp" />
 
                 <ProgressBar
@@ -1243,7 +1243,7 @@
                     android:max="100"
                     android:paddingLeft="15dp"
                     android:paddingRight="4dp"
-                    android:progress="1"
+                    android:progress="40"
                     android:progressTint="@color/green_teal"
                     android:tooltipText="10%" />
 
@@ -1280,7 +1280,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="5dp"
-                    android:text="51,300"
+                    android:text="138,000"
                     android:textSize="15dp" />
 
                 <ProgressBar
@@ -1291,7 +1291,7 @@
                     android:max="100"
                     android:paddingLeft="15dp"
                     android:paddingRight="4dp"
-                    android:progress="2"
+                    android:progress="46"
                     android:progressTint="@color/green_teal"
                     android:tooltipText="10%" />
 

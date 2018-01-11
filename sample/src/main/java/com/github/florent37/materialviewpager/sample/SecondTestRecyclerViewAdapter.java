@@ -1,18 +1,23 @@
 package com.github.florent37.materialviewpager.sample;
 
 import android.app.ProgressDialog;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -38,6 +43,45 @@ public class SecondTestRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
     TextView amount;
 
     View view2 = null;
+
+    TableRow tb1;
+    TableRow tb2;
+    TableRow tb3;
+    TableRow tb4;
+    TableRow tb5;
+    TableRow tb6;
+    TableRow tb7;
+    TableRow tb8;
+    TableRow tb9;
+    TableRow tb10;
+
+    TextView code1;
+    TextView code2;
+    TextView code3;
+    TextView code4;
+    TextView code5;
+    TextView code6;
+    TextView code7;
+    TextView code8;
+    TextView code9;
+    TextView code10;
+
+    String text1;
+    String text2;
+    String text3;
+    String text4;
+    String text5;
+    String text6;
+    String text7;
+    String text8;
+    String text9;
+    String text10;
+
+    String etString;
+
+    ArrayList<String> searchlist = new ArrayList<>();
+    ArrayList<TableRow> tblist = new ArrayList<>();
+    Button selectbtn;
 
     public SecondTestRecyclerViewAdapter(List<Object> contents) {
         this.contents = contents;
@@ -79,6 +123,8 @@ public class SecondTestRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
                         view.findViewById(R.id.purchaseFirstBigLayout).setVisibility(View.GONE);
                         view.findViewById(R.id.purchaseSecondBigLayout).setVisibility(View.VISIBLE);
                         view.findViewById(R.id.purchaseThirdBigLayout).setVisibility(View.GONE);
+
+                        selectclicked(view);
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
@@ -136,7 +182,9 @@ public class SecondTestRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
                     case TYPE_HEADER: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_small_sales, parent, false);
-
+                        view.findViewById(R.id.salesFirstSmallLayout).setVisibility(View.GONE);
+                        view.findViewById(R.id.salesSecondSmallLayout).setVisibility(View.VISIBLE);
+                        view.findViewById(R.id.salesThirdSmallLayout).setVisibility(View.GONE);
                         view2 = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_big_sales, parent, false);
 
@@ -146,7 +194,7 @@ public class SecondTestRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
                             @Override
                             public void onItemSelected(AdapterView<?> parent, View view,
                                                        int position, long id) {
-
+                                ((TextView) view).setTextColor(Color.BLACK);
                                 switch (String.valueOf(parent.getItemAtPosition(position))) {
                                     case "롯데마트 삼성점":
                                         shopWhere = "롯데마트 삼성점";
@@ -160,7 +208,7 @@ public class SecondTestRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
                                         view2.findViewById(R.id.secondShopLayout).setVisibility(View.VISIBLE);
                                         break;
                                 }
-                                textView.setText(shopWhere);
+                                /*textView.setText(shopWhere);*/
                             }
 
                             @Override
@@ -188,6 +236,101 @@ public class SecondTestRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
         }
         return null;
     }
+
+
+    public void selectclicked(View view){
+
+
+
+        tb1 = view.findViewById(R.id.plist01);
+        tb2 = view.findViewById(R.id.plist02);
+        tb3 = view.findViewById(R.id.plist03);
+        tb4 = view.findViewById(R.id.plist04);
+        tb5 = view.findViewById(R.id.plist05);
+        tb6 = view.findViewById(R.id.plist06);
+        tb7 = view.findViewById(R.id.plist07);
+        tb8 = view.findViewById(R.id.plist08);
+        tb9 = view.findViewById(R.id.plist09);
+        tb10 = view.findViewById(R.id.plist10);
+
+        tblist.add(tb1);
+        tblist.add(tb2);
+        tblist.add(tb3);
+        tblist.add(tb4);
+        tblist.add(tb5);
+        tblist.add(tb6);
+        tblist.add(tb7);
+        tblist.add(tb8);
+        tblist.add(tb9);
+        tblist.add(tb10);
+
+
+
+
+        code1 = view.findViewById(R.id.code1);
+        code2 = view.findViewById(R.id.code2);
+        code3 = view.findViewById(R.id.code3);
+        code4 = view.findViewById(R.id.code4);
+        code5 = view.findViewById(R.id.code5);
+        code6 = view.findViewById(R.id.code6);
+        code7 = view.findViewById(R.id.code7);
+        code8 = view.findViewById(R.id.code8);
+        code9 = view.findViewById(R.id.code9);
+        code10 = view.findViewById(R.id.code10);
+
+        text1 = code1.getText().toString();
+        text2 = code2.getText().toString();
+        text3 = code3.getText().toString();
+        text4 = code4.getText().toString();
+        text5 = code5.getText().toString();
+        text6 = code6.getText().toString();
+        text7 = code7.getText().toString();
+        text8 = code8.getText().toString();
+        text9 = code9.getText().toString();
+        text10 = code10.getText().toString();
+
+        searchlist.add(text1);
+        searchlist.add(text2);
+        searchlist.add(text3);
+        searchlist.add(text4);
+        searchlist.add(text5);
+        searchlist.add(text6);
+        searchlist.add(text7);
+        searchlist.add(text8);
+        searchlist.add(text9);
+        searchlist.add(text10);
+
+
+        Log.i("====>", searchlist.toString());
+        final EditText et = view.findViewById(R.id.search_process);
+        selectbtn = view.findViewById(R.id.search_btn);
+        selectbtn.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View view2) {
+
+
+                etString = et.getText().toString();
+                Log.i("etString",etString);
+
+                for(int i = 0; i <10 ; i++){
+                    Log.v("=====>EditValue", etString);
+                    Log.v("=====>"+i+"",searchlist.get(i) );
+                    if(etString.equals(searchlist.get(i))){
+                        Log.v("====>3", searchlist.toString());
+                        tblist.get(i).setVisibility(View.VISIBLE);
+                    }
+                    else{
+                        tblist.get(i).setVisibility(View.GONE);
+                    }
+
+                }
+            }
+        });
+
+    }
+
+
 
     public void onRadioButtonClicked(View view){
         radioImg2 = view.findViewById(R.id.radioImg2);

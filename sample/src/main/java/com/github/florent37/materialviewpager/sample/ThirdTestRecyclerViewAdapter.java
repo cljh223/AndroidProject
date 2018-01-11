@@ -174,6 +174,9 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                     case TYPE_HEADER: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_small_sales, parent, false);
+                        view.findViewById(R.id.salesFirstSmallLayout).setVisibility(View.GONE);
+                        view.findViewById(R.id.salesSecondSmallLayout).setVisibility(View.GONE);
+                        view.findViewById(R.id.salesThirdSmallLayout).setVisibility(View.VISIBLE);
                         view2 = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_big_sales, parent, false);
 
@@ -184,7 +187,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                             @Override
                             public void onItemSelected(AdapterView<?> parent, View view,
                                                        int position, long id) {
-
+                                ((TextView) view).setTextColor(Color.BLACK);
                                 switch (String.valueOf(parent.getItemAtPosition(position))) {
                                     case "롯데마트 삼성점":
                                         shopWhere = "롯데마트 삼성점";
