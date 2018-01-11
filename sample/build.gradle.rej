@@ -1,0 +1,9 @@
+diff a/sample/build.gradle b/sample/build.gradle	(rejected hunks)
+@@ -47,6 +47,7 @@
+ dependencies {
+     compile 'com.android.support:appcompat-v7:' + project.supportVersion
+     compile 'com.android.support:cardview-v7:' + project.supportVersion
++    compile 'com.naver.maps.open:naver-map-api:2.1.2@aar'
+     compile 'com.jakewharton:butterknife:8.1.0'
+     annotationProcessor 'com.jakewharton:butterknife-compiler:8.1.0'
+ 

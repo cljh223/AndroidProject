@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -30,6 +31,7 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
 
     static final int TYPE_HEADER = 0;
     static final int TYPE_CELL = 1;
+    static String shopWhere = "롯데마트 삼성점";
 
     TextView textView;
     String jsontext;
@@ -41,9 +43,12 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     TextView usage;
     TextView amount;
 
+    View view2 = null;
     public FirstTestRecyclerViewAdapter(List<Object> contents) {
         this.contents = contents;
     }
+
+    public FirstTestRecyclerViewAdapter(){};
 
     @Override
     public int getItemViewType(int position) {
@@ -144,22 +149,52 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                     case TYPE_HEADER: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_small_sales, parent, false);
+
+                        view2 = LayoutInflater.from(parent.getContext())
+                                .inflate(R.layout.list_item_card_big_sales, parent, false);
+
+
+                        Spinner s = (Spinner) view.findViewById(R.id.salesSpinner);
+                        final TextView textView = (TextView) view.findViewById(R.id.salesFirstSmallLayoutTitle);
+                        s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> parent, View view,
+                                                       int position, long id) {
+
+
+                                switch (String.valueOf(parent.getItemAtPosition(position))) {
+                                    case "롯데마트 삼성점":
+                                        shopWhere = "롯데마트 삼성점";
+                                        view2.findViewById(R.id.firstShopLayout).setVisibility(View.VISIBLE);
+                                        view2.findViewById(R.id.secondShopLayout).setVisibility(View.GONE);
+
+                                        break;
+                                    case "GS수퍼마켓 강남대치점":
+                                        shopWhere = "GS수퍼마켓 강남대치점";
+                                        view2.findViewById(R.id.firstShopLayout).setVisibility(View.GONE);
+                                        view2.findViewById(R.id.secondShopLayout).setVisibility(View.VISIBLE);
+                                        break;
+                                }
+                                textView.setText(shopWhere);
+                            }
+
+                            @Override
+                            public void onNothingSelected(AdapterView<?> parent) {
+                            }
+                        });
+
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
                     case TYPE_CELL: {
-                        view = LayoutInflater.from(parent.getContext())
-                                .inflate(R.layout.list_item_card_big_sales, parent, false);
-                        view.findViewById(R.id.salesFirstBigLayout).setVisibility(View.VISIBLE);
-                        view.findViewById(R.id.salesSecondBigLayout).setVisibility(View.GONE);
-                        view.findViewById(R.id.salesThirdBigLayout).setVisibility(View.GONE);
-                        return new RecyclerView.ViewHolder(view) {
-                        };
+                      /*  view = LayoutInflater.from(parent.getContext())
+                                .inflate(R.layout.list_item_card_big_sales, parent, false);*/
+                        view2.findViewById(R.id.salesFirstBigLayout).setVisibility(View.VISIBLE);
+                        view2.findViewById(R.id.salesSecondBigLayout).setVisibility(View.GONE);
+                        view2.findViewById(R.id.salesThirdBigLayout).setVisibility(View.GONE);
                     }
                 }
-
-
-                return new RecyclerView.ViewHolder(view) {
+                return new RecyclerView.ViewHolder(view2) {
                 };
         }
         return null;
@@ -169,9 +204,7 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     * 생산 파트 이벤트 메서드
     * */
 
-
-
-    public void onRadioButtonClicked(View view){
+    public void onRadioButtonClicked(View view) {
         Log.v("하잇", "=======>여기로 들어옴");
         radioImg1 = view.findViewById(R.id.radioImg1);
         ramenImg1 = view.findViewById(R.id.ramenImg1);
@@ -252,20 +285,20 @@ public class FirstTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
         });
     }
 
-    public void progressBarChange(View view){
+    public void progressBarChange(View view) {
         /*ProgressBar 수치 변경*/
-        ProgressBar progressBar1 = (ProgressBar)view.findViewById(R.id.progressBar1_1);
+        ProgressBar progressBar1 = (ProgressBar) view.findViewById(R.id.progressBar1_1);
         progressBar1.setProgress(50);
-        ProgressBar progressBar2 = (ProgressBar)view.findViewById(R.id.progressBar1_2);
+        ProgressBar progressBar2 = (ProgressBar) view.findViewById(R.id.progressBar1_2);
         progressBar2.setProgress(60);
-        ProgressBar progressBar3 = (ProgressBar)view.findViewById(R.id.progressBar1_3);
+        ProgressBar progressBar3 = (ProgressBar) view.findViewById(R.id.progressBar1_3);
         progressBar3.setProgress(70);
-        ProgressBar progressBar4 = (ProgressBar)view.findViewById(R.id.progressBar1_4);
+        ProgressBar progressBar4 = (ProgressBar) view.findViewById(R.id.progressBar1_4);
         progressBar4.setProgress(80);
-        ProgressBar progressBar5 = (ProgressBar)view.findViewById(R.id.progressBar1_5);
+        ProgressBar progressBar5 = (ProgressBar) view.findViewById(R.id.progressBar1_5);
         progressBar5.setProgress(90);
 
-        TextView textView = (TextView)view.findViewById(R.id.index1_1);
+        TextView textView = (TextView) view.findViewById(R.id.index1_1);
         textView.setText("50%");
     }
 

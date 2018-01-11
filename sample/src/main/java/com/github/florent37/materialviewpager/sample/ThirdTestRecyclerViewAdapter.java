@@ -4,9 +4,6 @@ import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,13 +18,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.github.florent37.materialviewpager.sample.fragment.ThirdRecyclerViewFragment;
 
 import java.util.List;
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
 
 /**
  * Created by florentchampigny on 24/04/15.
@@ -38,6 +30,9 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
 
     static final int TYPE_HEADER = 0;
     static final int TYPE_CELL = 1;
+
+    static String shopWhere = new FirstTestRecyclerViewAdapter().shopWhere;
+    View view2 = null;
 
     TextView textView;
     String jsontext;
@@ -146,7 +141,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
-                } 
+                }
             case "logistics":
                 switch (viewType) {
                     case TYPE_HEADER: {
@@ -179,28 +174,54 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                     case TYPE_HEADER: {
                         view = LayoutInflater.from(parent.getContext())
                                 .inflate(R.layout.list_item_card_small_sales, parent, false);
+                        view2 = LayoutInflater.from(parent.getContext())
+                                .inflate(R.layout.list_item_card_big_sales, parent, false);
+
+
+                        Spinner s = (Spinner) view.findViewById(R.id.salesSpinner);
+                        final TextView textView = (TextView) view.findViewById(R.id.salesFirstSmallLayoutTitle);
+                        s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> parent, View view,
+                                                       int position, long id) {
+
+                                switch (String.valueOf(parent.getItemAtPosition(position))) {
+                                    case "롯데마트 삼성점":
+                                        shopWhere = "롯데마트 삼성점";
+
+                                        break;
+                                    case "GS수퍼마켓 강남대치점":
+                                        shopWhere = "GS수퍼마켓 강남대치점";
+                                        break;
+                                }
+                                textView.setText(shopWhere);
+                            }
+
+                            @Override
+                            public void onNothingSelected(AdapterView<?> parent) {
+                            }
+                        });
+
+
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
                     case TYPE_CELL: {
-                        view = LayoutInflater.from(parent.getContext())
-                                .inflate(R.layout.list_item_card_big_sales, parent, false);
-                        view.findViewById(R.id.salesFirstBigLayout).setVisibility(View.GONE);
-                        view.findViewById(R.id.salesSecondBigLayout).setVisibility(View.GONE);
-                        view.findViewById(R.id.salesThirdBigLayout).setVisibility(View.VISIBLE);
-                        return new RecyclerView.ViewHolder(view) {
+                        view2.findViewById(R.id.salesFirstBigLayout).setVisibility(View.GONE);
+                        view2.findViewById(R.id.salesSecondBigLayout).setVisibility(View.GONE);
+                        view2.findViewById(R.id.salesThirdBigLayout).setVisibility(View.VISIBLE);
+                        return new RecyclerView.ViewHolder(view2) {
                         };
                     }
                 }
-
 
                 return new RecyclerView.ViewHolder(view) {
                 };
         }
         return null;
-    } 
+    }
 
-    public void onRadioButtonClicked(View view){
+    public void onRadioButtonClicked(View view) {
         radioImg3 = view.findViewById(R.id.radioImg3);
         ramenImg3 = view.findViewById(R.id.ramenImg3);
         ramenName = view.findViewById(R.id.ramenName3);
@@ -279,34 +300,34 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
         });
     }
 
-    public void progressBarChange(View view){
+    public void progressBarChange(View view) {
         /*ProgressBar 수치 변경*/
-        ProgressBar progressBar31 = (ProgressBar)view.findViewById(R.id.progressBar3_1);
+        ProgressBar progressBar31 = (ProgressBar) view.findViewById(R.id.progressBar3_1);
         progressBar31.setProgress(76);
-        ProgressBar progressBar32 = (ProgressBar)view.findViewById(R.id.progressBar3_2);
+        ProgressBar progressBar32 = (ProgressBar) view.findViewById(R.id.progressBar3_2);
         progressBar32.setProgress(55);
-        ProgressBar progressBar33 = (ProgressBar)view.findViewById(R.id.progressBar3_3);
+        ProgressBar progressBar33 = (ProgressBar) view.findViewById(R.id.progressBar3_3);
         progressBar33.setProgress(69);
-        ProgressBar progressBar34 = (ProgressBar)view.findViewById(R.id.progressBar3_4);
+        ProgressBar progressBar34 = (ProgressBar) view.findViewById(R.id.progressBar3_4);
         progressBar34.setProgress(80);
-        ProgressBar progressBar35 = (ProgressBar)view.findViewById(R.id.progressBar3_5);
+        ProgressBar progressBar35 = (ProgressBar) view.findViewById(R.id.progressBar3_5);
         progressBar35.setProgress(93);
 
         /*ProgressBar 텍스트 변경*/
-        TextView textView31 = (TextView)view.findViewById(R.id.index3_1);
+        TextView textView31 = (TextView) view.findViewById(R.id.index3_1);
         textView31.setText("76%");
-        TextView textView32 = (TextView)view.findViewById(R.id.index3_2);
+        TextView textView32 = (TextView) view.findViewById(R.id.index3_2);
         textView32.setText("55%");
-        TextView textView33 = (TextView)view.findViewById(R.id.index3_3);
+        TextView textView33 = (TextView) view.findViewById(R.id.index3_3);
         textView33.setText("69%");
-        TextView textView34 = (TextView)view.findViewById(R.id.index3_4);
+        TextView textView34 = (TextView) view.findViewById(R.id.index3_4);
         textView34.setText("80%");
-        TextView textView35 = (TextView)view.findViewById(R.id.index3_5);
+        TextView textView35 = (TextView) view.findViewById(R.id.index3_5);
         textView35.setText("93%");
     }
 
     //생산 부문 스피너
-    public void SpinnerSet(View view){
+    public void SpinnerSet(View view) {
         Spinner ramenSpinner = view.findViewById(R.id.r_name);
         ArrayAdapter<CharSequence> ramenAdapter = ArrayAdapter.createFromResource(view.getContext(), R.array.ramen, android.R.layout.simple_spinner_item);
         ramenAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -318,12 +339,14 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                 ((TextView) view).setTextColor(Color.BLACK);
                 spinnerResult = parent.getItemAtPosition(position).toString();
             }
+
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
         });
     }
 
-    public void RadioGet(View view){
+    public void RadioGet(View view) {
         rb1 = view.findViewById(R.id.rd_man);
         rb1.setChecked(true);
         radioResult = rb1.getText().toString();
@@ -351,7 +374,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
 
 
     //생산부문 예측 결과
-    public void ResultSet(){
+    public void ResultSet() {
         amountResult = editText.getText().toString();
         if(spinnerResult.equals("안성탕면")&&radioResult.equals("MAN")){
             r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
@@ -361,14 +384,15 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
             r_amount.setTextColor(Color.BLUE);
             notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("안성탕면")&&radioResult.equals("TIME")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
+        } else if (spinnerResult.equals("안성탕면") && radioResult.equals("TIME")) {
+            r_name.setText(spinnerResult + ", " + amountResult + "EA 생산시");
             r_param.setText("필요한 예상 생산시간은");
             r_amount.setText("12.6일 입니다.");
             r_amount.setTextSize(20);
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
             r_amount.setTextColor(Color.BLUE);
             notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
+
         }else if(spinnerResult.equals("안성탕면")&&radioResult.equals("COST")){
             r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
             r_param.setText("필요한 예상 재료비용은");
@@ -387,8 +411,8 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
             r_amount.setTextColor(Color.BLUE);
             notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("신라면")&&radioResult.equals("TIME")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
+        } else if (spinnerResult.equals("신라면") && radioResult.equals("TIME")) {
+            r_name.setText(spinnerResult + ", " + amountResult + "EA 생산시");
             r_param.setText("필요한 예상 생산시간은");
             r_amount.setText("10.4일 입니다.");
             r_amount.setTextSize(20);
@@ -413,8 +437,8 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
             r_amount.setTextColor(Color.BLUE);
             notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("너구리")&&radioResult.equals("TIME")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
+        } else if (spinnerResult.equals("너구리") && radioResult.equals("TIME")) {
+            r_name.setText(spinnerResult + ", " + amountResult + "EA 생산시");
             r_param.setText("필요한 예상 생산시간은");
             r_amount.setText("11.6일 입니다.");
             r_amount.setTextSize(20);
@@ -439,8 +463,8 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
             r_amount.setTextColor(Color.BLUE);
             notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("멸치칼국수라면")&&radioResult.equals("TIME")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
+        } else if (spinnerResult.equals("멸치칼국수라면") && radioResult.equals("TIME")) {
+            r_name.setText(spinnerResult + ", " + amountResult + "EA 생산시");
             r_param.setText("필요한 예상 생산시간은");
             r_amount.setText("10.9일 입니다.");
             r_amount.setTextSize(20);
@@ -465,8 +489,8 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             r_amount.setTypeface(r_amount.getTypeface(), Typeface.BOLD);
             r_amount.setTextColor(Color.BLUE);
             notify.setText("※예측값이므로 참고 용도로만 활용하기 바랍니다.");
-        }else if(spinnerResult.equals("사리곰탕")&&radioResult.equals("TIME")){
-            r_name.setText(spinnerResult +", " + amountResult+"EA 생산시");
+        } else if (spinnerResult.equals("사리곰탕") && radioResult.equals("TIME")) {
+            r_name.setText(spinnerResult + ", " + amountResult + "EA 생산시");
             r_param.setText("필요한 예상 생산시간은");
             r_amount.setText("9.3일 입니다.");
             r_amount.setTextSize(20);
