@@ -89,6 +89,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // 주소, URL 객체
         public void run() {
+
             try {
                 URL url = new URL(address);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
