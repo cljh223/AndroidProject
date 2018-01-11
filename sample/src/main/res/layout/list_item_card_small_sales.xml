@@ -33,7 +33,7 @@
 
                 <TextView
                     android:id="@+id/salesFirstSmallLayoutTitle"
-                    android:layout_width="180sp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:paddingTop="15dp"
                     android:layout_marginLeft="5sp"
