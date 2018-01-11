@@ -1,5 +1,6 @@
 package com.github.florent37.materialviewpager.sample;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
@@ -45,6 +46,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout mDrawer;
     private ActionBarDrawerToggle mDrawerToggle;
 
+    private Handler mHandler;
+    private ProgressDialog mProgressDialog;
+
+
     static String WHERE = "purchase";
     static String WHERE_DETAIL = "가격 및 재고";
 
@@ -52,6 +57,38 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+        mHandler = new Handler();
+
+        runOnUiThread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                mProgressDialog = ProgressDialog.show(MainActivity.this,"",
+                        "잠시만 기다려 주세요.",true);
+                mHandler.postDelayed( new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        try
+                        {
+                            if (mProgressDialog!=null&&mProgressDialog.isShowing()){
+                                mProgressDialog.dismiss();
+                            }
+                        }
+                        catch ( Exception e )
+                        {
+                            e.printStackTrace();
+                        }
+                    }
+                }, 6000);
+            }
+        } );
+
+
+        출처: http://arabiannight.tistory.com/entry/안드로이드Android-잠시만-기다려-주세요-ProgressDialog-띄우기 [아라비안나이트]
         if (!BuildConfig.DEBUG) {
             Fabric.with(this, new Crashlytics());
         }

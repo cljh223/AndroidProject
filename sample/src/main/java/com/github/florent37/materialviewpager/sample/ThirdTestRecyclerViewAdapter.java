@@ -26,6 +26,8 @@ import android.widget.Toast;
 import com.github.florent37.materialviewpager.sample.fragment.ThirdRecyclerViewFragment;
 
 import java.util.List;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 /**
  * Created by florentchampigny on 24/04/15.
@@ -94,6 +96,7 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                         view.findViewById(R.id.purchaseFirstSmallLayout).setVisibility(View.GONE);
                         view.findViewById(R.id.purchaseSecondSmallLayout).setVisibility(View.GONE);
                         view.findViewById(R.id.purchaseThirdSmallLayout).setVisibility(View.VISIBLE);
+
                         return new RecyclerView.ViewHolder(view) {
                         };
                     }
