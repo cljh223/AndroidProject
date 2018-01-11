@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView idText;
     int i;
     String p;
+    String user;
     ProgressDialog progressDialog;
     private final int SUCCESS = 0;
     private final int FAIL = 1;
@@ -67,13 +68,13 @@ public class LoginActivity extends AppCompatActivity {
         try {
             i = Integer.parseInt(id.getText().toString());
         }catch (Exception e){
-            Toast.makeText(this, "아이디는 사원번호입니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "아이디는 사원번호입니다", Toast.LENGTH_SHORT).show();
         }
 
         p = password.getText().toString();
 
         if (id.getText().toString().length() == 0 || p.length() == 0) {
-            Toast.makeText(this, "데이터를 입력해주세요", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "아이디와 비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show();
             return;
         } else {
             progressDialog = ProgressDialog.show(this, "Wait", "Download...");
@@ -103,7 +104,9 @@ public class LoginActivity extends AppCompatActivity {
                         while ((ch = in.read()) != -1) {
                             sb.append((char) ch);
                         }
-                        if (sb.toString().equals("SUCCESS")) {
+                        if (sb.toString().substring(0, 7).equals("SUCCESS")) {
+                            user = sb.toString().substring(7, sb.length());
+                            Log.v("로그인 성공", sb.toString().substring(7, sb.length())+"");
                             handler.sendEmptyMessage(SUCCESS);
                             Intent i = new Intent(getApplicationContext(), MainActivity.class);
                             //Intent를 선언하여 생성을 하고, SecondActivity를 지정해주고
@@ -111,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                             finish();
                         } else {
                             handler.sendEmptyMessage(FAIL);
-                        }
+                    }
                         in.close();
                     }
                 }
@@ -125,11 +128,13 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
+            Log.v("메세지1", "====>"+user+"");
+            //String code = msg.toString().substring(0,6);
             progressDialog.dismiss();
             if (msg.what == SUCCESS) {
-                Toast.makeText(LoginActivity.this, "접속되었습니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, user+"님이 접속되었습니다", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(LoginActivity.this, "아이디나 바밀번호가 잘못되었습니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "아이디나 비밀번호가 잘못되었습니다", Toast.LENGTH_SHORT).show();
             }
         }
     };
