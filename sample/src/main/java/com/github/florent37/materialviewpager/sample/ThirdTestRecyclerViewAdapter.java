@@ -42,6 +42,10 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     ProgressDialog progressDialog;
     ImageView radioImg3;
     ImageView ramenImg3;
+    TextView ramenName;
+    TextView district;
+    TextView usage;
+    TextView amount;
 
     //생산 부문 멤버
     LinearLayout resultlayout;
@@ -196,6 +200,10 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     public void onRadioButtonClicked(View view){
         radioImg3 = view.findViewById(R.id.radioImg3);
         ramenImg3 = view.findViewById(R.id.ramenImg3);
+        ramenName = view.findViewById(R.id.ramenName3);
+        district = view.findViewById(R.id.district3);
+        usage = view.findViewById(R.id.usage3);
+        amount = view.findViewById(R.id.amount3);
 
         /*라디오버튼3_1*/
         RadioButton btn31 = view.findViewById(R.id.logi_button31);
@@ -204,6 +212,10 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             public void onClick(View view) {
                 radioImg3.setImageResource(R.drawable.logi_31);
                 ramenImg3.setImageResource(R.drawable.ansung_ramen);
+                ramenName.setText("안성탕면");
+                district.setText("A구역 / 60㎢");
+                usage.setText("76%");
+                amount.setText("565개");
             }
         });
 
@@ -214,6 +226,10 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             public void onClick(View view) {
                 radioImg3.setImageResource(R.drawable.logi_32);
                 ramenImg3.setImageResource(R.drawable.sin_ramen);
+                ramenName.setText("신라면");
+                district.setText("B구역 / 60㎢");
+                usage.setText("55%");
+                amount.setText("338개");
             }
         });
 
@@ -224,6 +240,10 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             public void onClick(View view) {
                 radioImg3.setImageResource(R.drawable.logi_33);
                 ramenImg3.setImageResource(R.drawable.nugool_ramen);
+                ramenName.setText("너구리");
+                district.setText("C구역 / 30㎢");
+                usage.setText("69%");
+                amount.setText("429개");
             }
         });
 
@@ -234,6 +254,10 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             public void onClick(View view) {
                 radioImg3.setImageResource(R.drawable.logi_34);
                 ramenImg3.setImageResource(R.drawable.anchovy_ramen);
+                ramenName.setText("멸치칼국수");
+                district.setText("D구역 / 60㎢");
+                usage.setText("80%");
+                amount.setText("571개");
             }
         });
 
@@ -244,25 +268,38 @@ public class ThirdTestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             public void onClick(View view) {
                 radioImg3.setImageResource(R.drawable.logi_35);
                 ramenImg3.setImageResource(R.drawable.sari_ramen);
+                ramenName.setText("사리곰탕");
+                district.setText("E구역 / 60㎢");
+                usage.setText("93%");
+                amount.setText("612개");
             }
         });
     }
 
     public void progressBarChange(View view){
         /*ProgressBar 수치 변경*/
-        ProgressBar progressBar1 = (ProgressBar)view.findViewById(R.id.progressBar3_1);
-        progressBar1.setProgress(70);
-        ProgressBar progressBar2 = (ProgressBar)view.findViewById(R.id.progressBar3_2);
-        progressBar2.setProgress(50);
-        ProgressBar progressBar3 = (ProgressBar)view.findViewById(R.id.progressBar3_3);
-        progressBar3.setProgress(60);
-        ProgressBar progressBar4 = (ProgressBar)view.findViewById(R.id.progressBar3_4);
-        progressBar4.setProgress(80);
-        ProgressBar progressBar5 = (ProgressBar)view.findViewById(R.id.progressBar3_5);
-        progressBar5.setProgress(90);
+        ProgressBar progressBar31 = (ProgressBar)view.findViewById(R.id.progressBar3_1);
+        progressBar31.setProgress(76);
+        ProgressBar progressBar32 = (ProgressBar)view.findViewById(R.id.progressBar3_2);
+        progressBar32.setProgress(55);
+        ProgressBar progressBar33 = (ProgressBar)view.findViewById(R.id.progressBar3_3);
+        progressBar33.setProgress(69);
+        ProgressBar progressBar34 = (ProgressBar)view.findViewById(R.id.progressBar3_4);
+        progressBar34.setProgress(80);
+        ProgressBar progressBar35 = (ProgressBar)view.findViewById(R.id.progressBar3_5);
+        progressBar35.setProgress(93);
 
-        TextView textView = (TextView)view.findViewById(R.id.index3_1);
-        textView.setText("70%");
+        /*ProgressBar 텍스트 변경*/
+        TextView textView31 = (TextView)view.findViewById(R.id.index3_1);
+        textView31.setText("76%");
+        TextView textView32 = (TextView)view.findViewById(R.id.index3_2);
+        textView32.setText("55%");
+        TextView textView33 = (TextView)view.findViewById(R.id.index3_3);
+        textView33.setText("69%");
+        TextView textView34 = (TextView)view.findViewById(R.id.index3_4);
+        textView34.setText("80%");
+        TextView textView35 = (TextView)view.findViewById(R.id.index3_5);
+        textView35.setText("93%");
     }
 
     //생산 부문 스피너

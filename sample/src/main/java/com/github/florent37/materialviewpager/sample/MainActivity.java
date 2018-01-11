@@ -118,25 +118,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.purchaseMenu: {
                 //do somthing
-                Toast.makeText(this, "재준사아아앙!!!!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "구매부 페이지입니다", Toast.LENGTH_SHORT).show();
                 WHERE = "purchase";
                 break;
             }
             case R.id.productionMenu: {
                 //do somthing
-                Toast.makeText(this, "죠쵸!!!!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "생산부 페이지입니다", Toast.LENGTH_SHORT).show();
                 WHERE = "production";
                 break;
             }
             case R.id.logisticsMenu: {
                 //do somthing
-                Toast.makeText(this, "은지쏘오오옹!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "물류부 페이지입니다", Toast.LENGTH_SHORT).show();
                 WHERE = "logistics";
                 break;
             }
             case R.id.salesMenu: {
                 //do somthing
-                Toast.makeText(this, "준석상!!!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "영업부 페이지입니다", Toast.LENGTH_SHORT).show();
                 WHERE = "sales";
                 break;
             }

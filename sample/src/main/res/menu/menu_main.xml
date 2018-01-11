@@ -1,12 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
-    <group android:checkableBehavior="single">
+    tools:context=".MainActivity"
+    tools:override="true">
 
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/purchaseMenu"
-            android:title="구매" />
+            android:title="구매"
+            />
 
         <item
             android:id="@+id/productionMenu"
@@ -14,11 +16,11 @@
 
         <item
             android:id="@+id/logisticsMenu"
-            android:title="물류" />
+            android:title="물류"/>
 
         <item
             android:id="@+id/salesMenu"
-            android:title="영업" />
+            android:title="영업"/>
     </group>
 </menu>
 

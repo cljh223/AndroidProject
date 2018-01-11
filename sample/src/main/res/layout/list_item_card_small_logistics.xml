@@ -188,7 +188,7 @@
                         android:layout_gravity="center"
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
-                        android:text="571"/>
+                        android:text="412"/>
 
                     <ProgressBar
                         android:id="@+id/progressBar1_2"
@@ -231,7 +231,7 @@
                         android:layout_gravity="center"
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
-                        android:text="339"/>
+                        android:text="505"/>
 
                     <ProgressBar
                         android:id="@+id/progressBar1_3"
@@ -261,7 +261,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textSize="16dp"
-                        android:text="멸치칼국수라면"/>
+                        android:text="멸치칼국수"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -274,7 +274,7 @@
                         android:layout_gravity="center"
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
-                        android:text="505"/>
+                        android:text="571"/>
 
                     <ProgressBar
                         android:id="@+id/progressBar1_4"
@@ -317,7 +317,7 @@
                         android:layout_gravity="center"
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
-                        android:text="272"/>
+                        android:text="603"/>
 
                     <ProgressBar
                         android:id="@+id/progressBar1_5"
@@ -387,7 +387,7 @@
                         android:id="@+id/logi_usage2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="전체이용률: 86%"
+                        android:text="전체이용률: 92%"
                         android:textSize="25sp" />
 
                 </LinearLayout>
@@ -468,7 +468,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="338"
+                        android:text="420"
                         android:textColor="@android:color/holo_orange_light"
                         android:textSize="16dp" />
 
@@ -514,7 +514,7 @@
                         android:layout_gravity="center"
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
-                        android:text="571"/>
+                        android:text="347"/>
 
                     <ProgressBar
                         android:id="@+id/progressBar2_2"
@@ -557,7 +557,7 @@
                         android:layout_gravity="center"
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
-                        android:text="339"/>
+                        android:text="561"/>
 
                     <ProgressBar
                         android:id="@+id/progressBar2_3"
@@ -587,7 +587,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textSize="16dp"
-                        android:text="멸치칼국수라면"/>
+                        android:text="멸치칼국수"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -600,7 +600,7 @@
                         android:layout_gravity="center"
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
-                        android:text="505"/>
+                        android:text="598"/>
 
                     <ProgressBar
                         android:id="@+id/progressBar2_4"
@@ -643,7 +643,7 @@
                         android:layout_gravity="center"
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
-                        android:text="272"/>
+                        android:text="603"/>
 
                     <ProgressBar
                         android:id="@+id/progressBar2_5"
@@ -712,7 +712,7 @@
                         android:id="@+id/logi_usage3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="전체이용률: 86%"
+                        android:text="전체이용률: 89%"
                         android:textSize="25sp" />
 
                 </LinearLayout>
@@ -793,7 +793,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="338"
+                        android:text="565"
                         android:textColor="@android:color/holo_orange_light"
                         android:textSize="16dp" />
 
@@ -839,7 +839,7 @@
                         android:layout_gravity="center"
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
-                        android:text="571"/>
+                        android:text="338"/>
 
                     <ProgressBar
                         android:id="@+id/progressBar3_2"
@@ -882,7 +882,7 @@
                         android:layout_gravity="center"
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
-                        android:text="339"/>
+                        android:text="429"/>
 
                     <ProgressBar
                         android:id="@+id/progressBar3_3"
@@ -912,7 +912,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textSize="16dp"
-                        android:text="멸치칼국수라면"/>
+                        android:text="멸치칼국수"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -925,7 +925,7 @@
                         android:layout_gravity="center"
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
-                        android:text="505"/>
+                        android:text="571"/>
 
                     <ProgressBar
                         android:id="@+id/progressBar3_4"
@@ -968,7 +968,7 @@
                         android:layout_gravity="center"
                         android:textSize="16dp"
                         android:textColor="@android:color/holo_orange_light"
-                        android:text="272"/>
+                        android:text="612"/>
 
                     <ProgressBar
                         android:id="@+id/progressBar3_5"

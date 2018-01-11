@@ -31,16 +31,12 @@
                 android:gravity="left|center_vertical"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:src="@drawable/grocery" />
-
                 <TextView
                     android:id="@+id/salesFirstSmallLayoutTitle"
                     android:layout_width="180sp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10sp"
+                    android:paddingTop="15dp"
+                    android:layout_marginLeft="5sp"
                     android:text="매장을 선택해주세요"
                     android:textSize="20sp" />
 
@@ -55,11 +51,6 @@
                         android:layout_width="50sp"
                         android:layout_height="wrap_content"
                         android:entries="@array/city"></Spinner>
-
-                    <Spinner
-                        android:layout_width="50sp"
-                        android:layout_height="wrap_content"
-                        android:entries="@array/salesShop"></Spinner>
                 </LinearLayout>
 
 
